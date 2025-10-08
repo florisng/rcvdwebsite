@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Official website of the Rwanda Council for Veterinary Doctors (RCVD), built with HTML, CSS, and Node.js/Express.",
   "main": "app.js",
+  "type": "module",
   "scripts": {
+    "start": "node app.js",
     "test": "jest"
   },
   "repository": {
@@ -26,5 +28,9 @@
   "bugs": {
     "url": "https://github.com/florisng/rcvd-website/issues"
   },
-  "homepage": "https://github.com/florisng/rcvd-website#readme"
+  "homepage": "https://github.com/florisng/rcvd-website#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0"
+  }
 }
