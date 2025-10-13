@@ -1,0 +1,30 @@
+.description {
+    margin-left: 11%;
+    margin-right: 11%;
+}
+.description-title {
+    text-align: center;
+}
+.description-img {
+    width: 100%;
+}
+.description-details {
+    display: flex;
+}
+.description-details div {
+    width: 50%;
+    flex-direction: column;
+}
+.service-img {
+    width: 100%;
+}
+.centered-txt {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+@media (max-width: 600px) {
+    
+}
