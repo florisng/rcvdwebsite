@@ -1,0 +1,51 @@
+/* --- Slider Wrapper --- */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+/* --- Each Slide --- */
+.slide {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* --- Active Slide --- */
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* --- Optional Overlay (for text later) --- */
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .slider {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 50vh;
+  }
+}
