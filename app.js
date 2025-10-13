@@ -1,16 +1,18 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
 import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+dotenv.config();
+
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 const PORT = process.env.PORT || 3000;
 
 // Middleware
@@ -18,21 +20,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'about.html'));
-});
-
-app.get('/services', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'services.html'));
-});
-
-app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'contact.html'));
-});
+app.get('/', (req, res) => res.render('index'));
+app.get('/about', (req, res) => res.render('about'));
+app.get('/services', (req, res) => res.render('services'));
+app.get('/contact', (req, res) => res.render('contact'));
 
 // Contact form POST
 app.use(express.json()); // needed for JSON parsing

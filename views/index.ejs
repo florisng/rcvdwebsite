@@ -3,19 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RCVD Website</title>
+  <title>RCVD - Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Rwanda Council for Veterinary Doctors (RCVD)</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/contact">Contact</a>
-    </nav>
-  </header>
+  <%- include('partials/header') %>
 
   <main>
     <section>
@@ -24,8 +16,7 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 RCVD</p>
-  </footer>
+  <%- include('partials/footer') %>
+  <script src="/js/menu.js"></script>
 </body>
 </html>
