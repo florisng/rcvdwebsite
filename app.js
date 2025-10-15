@@ -21,11 +21,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.get('/', (req, res) => res.render('index'));
-app.get('/services', (req, res) => res.render('services'));
 app.get('/contact', (req, res) => res.render('contact'));
+app.get('/admin-dashboard', (req, res) => res.render('admin-dashboard'));
+app.get('/admin', (req, res) => {
+  res.render('admin', { error: null });
+});
 
 // Contact form POST
 app.use(express.json()); // needed for JSON parsing
+
+// POST: Handle login form
+app.post('/admin-login', (req, res) => {
+  const { email, password } = req.body;
+
+  if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
+    // ✅ Login successful
+    return res.redirect('/admin-dashboard');
+  } else {
+    // ❌ Invalid credentials – stay on same page
+    return res.render('admin', { error: 'Invalid email or password' });
+  }
+});
 
 app.post('/contact', async (req, res) => {
   const { name, email, message } = req.body;

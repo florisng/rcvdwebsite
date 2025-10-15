@@ -37,6 +37,10 @@
   background: rgba(0, 0, 0, 0.2);
 }
 
+.mySlides {
+  display:none;
+}
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
   .slider {

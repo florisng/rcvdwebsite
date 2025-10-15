@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCVD - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="container">
+    <div class="login-wrapper">
+      <div class="login-container">
+        <form action="/admin-login" method="POST" class="login-form">
+          <h2>Admin Login</h2>
+
+          <% if (error) { %>
+            <div class="error-message"><%= error %></div>
+          <% } %>
+
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required />
+          </div>
+
+          <button type="submit" class="btn-login">Login</button>
+          <p class="note">Authorized access only.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <%- include('partials/footer') %>
+
+  <script src="/js/menu.js"></script>
+</body>
+</html>
