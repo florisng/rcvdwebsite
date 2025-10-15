@@ -8,14 +8,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 100vh; */
-  /* background-color: #f4f4f4; */
   padding: 40px 20px;
 }
 
 .login-container {
   background: white;
-  padding: 40px 30px;
+  padding: 50px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -29,7 +27,7 @@
 }
 
 .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .input-group label {
@@ -39,9 +37,11 @@
 }
 
 .input-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 15px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #ccc;
   border-radius: 6px;
   font-size: 1rem;
 }

@@ -5,30 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RCVD - Contact</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
   <%- include('partials/header') %>
 
-  <main>
-    <section>
-    <h2>Send Us a Message</h2>
-    <form id="contactForm" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit">Send Message</button>
-    </form>
-
-    <!-- Message will appear here -->
-    <div id="formMessage" style="margin-top: 1rem; color: green;"></div>
-    </section>
-  </main>
+  <div class="container">
+    <main>
+      <section>
+        <h1>Let's get in touch</h1>
+        <!-- Message will appear here -->
+        <div id="formMessage" class="form-message"></div>
+        <form id="contactForm" method="POST">
+            <input type="text" id="name" name="name" placeholder="Full name" required>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Email - johndoe@gmail.com" required>
+            <br>
+            <input type="phone" id="phone" name="phone" placeholder="Phone - 078 70 300 24" required>
+            <br>
+            <textarea id="message" name="message" placeholder="Message" required></textarea>
+            <br>
+            <button type="submit">Send Message</button>
+        </form>
+        </section>
+    </main>
+  </div>
 
   <%- include('partials/footer') %>
 
@@ -37,26 +38,44 @@
     const formMessage = document.getElementById('formMessage');
 
     form.addEventListener('submit', async (e) => {
-        e.preventDefault(); // prevent full page reload
+      e.preventDefault();
 
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
 
-        try {
-            const response = await fetch('/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-            });
+      try {
+        const response = await fetch('/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
 
-            const result = await response.text();
-            formMessage.innerHTML = result; // show the message inline
-            form.reset(); // optional: clear the form
-        } catch (error) {
-            formMessage.style.color = 'red';
-            formMessage.innerHTML = 'Oops! Something went wrong.';
-            console.error(error);
+        const result = await response.text();
+
+        // Common styles
+        formMessage.style.marginBottom = '30px';
+        formMessage.style.padding = '20px';
+        formMessage.style.color = '#fff';
+
+        if (response.ok) {
+          // ✅ Success
+          formMessage.innerHTML = result;
+          formMessage.style.backgroundColor = '#23b14d'; // green
+          form.reset();
+        } else {
+          // ❌ Server returned error (e.g. 400, 500)
+          formMessage.innerHTML = result || 'Something went wrong on the server.';
+          formMessage.style.backgroundColor = '#e74c3c'; // red
         }
+
+      } catch (error) {
+        // ❌ Network or other unexpected error
+        formMessage.innerHTML = 'Oops! Something went wrong. Check your internet connection and try again.';
+        formMessage.style.marginBottom = '30px';
+        formMessage.style.padding = '20px';
+        formMessage.style.color = '#fff';
+        formMessage.style.backgroundColor = '#e74c3c'; // red
+      }
     });
 </script>
 <script src="/js/menu.js"></script>

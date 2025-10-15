@@ -13,7 +13,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Middleware
 app.use(express.static(path.join(__dirname, 'public')));
@@ -44,7 +44,7 @@ app.post('/admin-login', (req, res) => {
 });
 
 app.post('/contact', async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, phone, message } = req.body;
 
   let transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -58,7 +58,7 @@ app.post('/contact', async (req, res) => {
     from: `"${name}" <${email}>`,
     to: process.env.EMAIL_USER,
     subject: `New message from RCVD website`,
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
+    text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`
   };
 
   try {
@@ -66,7 +66,7 @@ app.post('/contact', async (req, res) => {
     res.send(`Thank you, ${name}! Your message has been sent.`);
   } catch (error) {
     console.error(error);
-    res.send(`Oops! Something went wrong: ${error.message}`);
+    res.send(`Oops! Something went wrong. Please check your internet connexion and try again.`);
   }
 });
 

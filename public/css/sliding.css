@@ -1,0 +1,50 @@
+
+
+.partners-slider {
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  width: calc(200%); /* because of the duplicated logos */
+  animation: scroll 20s linear infinite;
+}
+
+.partners-slider:hover .slider-track {
+  animation-play-state: paused;
+}
+
+.sliding {
+  flex: 0 0 auto;
+  width: 150px;
+  margin: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sliding img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sliding {
+    width: 100px;
+    margin: 0 10px;
+  }
+}

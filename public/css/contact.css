@@ -1,0 +1,29 @@
+
+.container {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+input, textarea, button {
+    padding: 15px;
+    margin-bottom: 30px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #23b14d;
+    transition: 0.5s;
+}
+
+input:hover, textarea:hover {
+    border-bottom: 5px solid #23b14d;
+}
+
+button:hover {
+    background-color: #23b14d;
+    color: white;
+    cursor: pointer;
+}
+
+textarea {
+    width: 50%;
+}
