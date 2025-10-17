@@ -105,15 +105,15 @@ app.post('/contact', async (req, res) => {
 
 // Handle POST request
 app.post('/admin-create-user', async (req, res) => {
-  const { firstname, lastname, username, password } = req.body;
+  const { firstname, lastname, username, password, type } = req.body;
 
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     await pool.query(
-      `INSERT INTO users (firstname, lastname, username, password) 
-       VALUES ($1, $2, $3, $4)`,
-      [firstname, lastname, username, hashedPassword]
+      `INSERT INTO users (firstname, lastname, username, password, type) 
+       VALUES ($1, $2, $3, $4, $5)`,
+      [firstname, lastname, username, hashedPassword, type]
     );
 
     res.render('admin-create-user', { message: 'User created successfully!', messageType: 'success' });
