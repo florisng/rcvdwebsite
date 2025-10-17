@@ -5,16 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RCVD - Admin</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/admin-dashboard.css">
 </head>
 <body>
   <%- include('partials/header') %>
 
-  <div class="container">
-    <h1>Admin dashboard</h1>
-    <hr>
+  <div class="dashboard-container">
+    <h1>Users</h1>
     <div>
-      <h2>Welcome</h2>
+      <div class="dashboard-actions">
+        <a href="/admin-create-user" class="btn-action">+ Create user</a>
+      </div>
+
+      <% if (error) { %>
+        <div class="error-message"><%= error %></div>
+      <% } %>
+
+      <% if (users.length > 0) { %>
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Username</th>
+              <th>Created At</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% users.forEach(user => { %>
+              <tr>
+                <td><%= user.id %></td>
+                <td><%= user.firstname %></td>
+                <td><%= user.lastname %></td>
+                <td><%= user.username %></td>
+                <td><%= new Date(user.created_at).toLocaleDateString() %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <p>No users found.</p>
+      <% } %>
     </div>
   </div>
 

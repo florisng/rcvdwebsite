@@ -1,0 +1,95 @@
+.dashboard-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h2 {
+  text-align: center;
+  color: #23b14d;
+  margin-bottom: 20px;
+}
+
+.dashboard-actions {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.btn-action {
+  background-color: #23b14d;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-action:hover {
+  background-color: #1d983f;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.user-table th,
+.user-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #23b14d;
+  color: white;
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+  background-color: #e8f5ec;
+}
+
+/* Create nre user style */
+input, button {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #23b14d;
+    padding: 10px;
+    margin: 20px;
+}
+input:hover {
+    border-bottom: 4px solid #23b14d;
+}
+button {
+    transition: 1s;
+    background-color: #23b14d;
+    color: #fff;
+}
+button:hover {
+    background-color: #fff;
+    color: #23b14d;
+    cursor: pointer;
+}
+/* Success and error messages */
+.success, .error {
+    color: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+.success {
+    background-color: #23b14d;
+}
+
+.error {
+    background-color: rgb(255, 78, 78);
+}
