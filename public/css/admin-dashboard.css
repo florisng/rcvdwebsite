@@ -1,3 +1,8 @@
+.admin-header, .admin-footer {
+    background-color: #23b14d;
+    padding: 20px;
+}
+
 .dashboard-container {
   max-width: 1000px;
   margin: 50px auto;
