@@ -8,3 +8,8 @@
     font-size: 22px;
     font-style: italic;
 }
+@media (max-width: 992px) {
+    .mission-vision img {
+        width: 70%;
+    }
+}

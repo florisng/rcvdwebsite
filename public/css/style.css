@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Tahoma';
   margin: 0;
   padding: 0;
 }
@@ -53,7 +53,7 @@ h1 {
 }
 
 .logo {
-  height: 50px;
+  height: 70px;
   width: auto;
 }
 
@@ -127,8 +127,15 @@ h1 {
    Special Buttons / Links
    ========================================================== */
 .start-learning {
-  border: 1px solid #fff;
   border-radius: 4px;
+  background-color: #fff;
+  color: #23b14d !important;
+  border: transparent 1px solid;
+}
+.start-learning:hover {
+  border: #fff 1px solid;
+  background-color: #1f9234 !important;
+  color: #fff !important;
 }
 
 /* ==========================================================
@@ -213,6 +220,11 @@ ul {
   .dropdown-menu li a {
     padding: 12px 20px;
   }
+}
+
+.container {
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 /* ---------------- Footer ---------------- */

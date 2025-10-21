@@ -13,7 +13,7 @@
 
 .login-container {
   background: white;
-  padding: 50px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -27,12 +27,12 @@
 }
 
 .input-group {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .input-group label {
   display: block;
-  font-weight: 600;
+  /* font-weight: 600; */
   margin-bottom: 8px;
 }
 
@@ -43,11 +43,10 @@
   border-left: none;
   border-bottom: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 1rem;
 }
 
 .btn-login {
-  width: 100%;
+  width: 50%;
   background-color: #23b14d;
   color: white;
   border: none;

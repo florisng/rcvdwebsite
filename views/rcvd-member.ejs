@@ -10,13 +10,13 @@
   <link rel="stylesheet" href="css/admin-dashboard.css">
 </head>
 <body>
-  <%- include('partials/admin-header') %>
+  <%- include('partials/header') %>
 
   <div class="container">
     <div class="login-wrapper">
       <div class="login-container">
-        <form action="/admin-login" method="POST" class="login-form">
-          <h2>Login</h2>
+        <form action="/member-login" method="POST" class="login-form">
+          <h2>Login as a Member</h2>
           <% if (error) { %>
             <div class="error-message"><%= error %></div>
           <% } %>
@@ -30,13 +30,12 @@
           </div>
 
           <button type="submit" class="btn-login">Login</button>
-          <p class="note">Authorized access only.</p>
         </form>
       </div>
     </div>
   </div>
 
-  <%- include('partials/admin-footer') %>
+  <%- include('partials/footer') %>
 
   <script src="/js/menu.js"></script>
 </body>

@@ -25,6 +25,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 app.get('/', (req, res) => res.render('index'));
 app.get('/contact', (req, res) => res.render('contact'));
+app.get('/job-board', (req, res) => res.render('job-board'));
+app.get('/board-members', (req, res) => res.render('board-members'));
+  res.render('announcement', { error: null });
+app.get('/', (req, res) => {
+  res.render('announcement', { error: null });
+});
+app.get('/rcvd-member', (req, res) => {
+  res.render('rcvd-member', { error: null });
+});
 app.get('/admin-create-user', (req, res) => {
   res.render('admin-create-user', { message: null, messageType: null });
 });

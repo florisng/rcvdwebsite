@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
+
   <title>RCVD - Home</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/slide.css">
@@ -10,6 +16,7 @@
   <link rel="stylesheet" href="css/sliding.css">
   <link rel="stylesheet" href="css/google-map.css">
   <link rel="stylesheet" href="css/mission-vision.css">
+  <link rel="stylesheet" href="css/news-events.css">
 </head>
 <body>
   <%- include('partials/header') %>
@@ -22,7 +29,7 @@
     <div class="slide" style="background-image: url('/images/slides/slide5.jpg');"></div>
   </div>
 
-  <div class="description">
+  <div class="container">
     <div class="description-title">
       <h1>Rwanda Council of Veterinary Doctors</h1>
       <img src="images/description.jpg" class="description-img" alt="">
@@ -40,7 +47,8 @@
 
 
     <div id="services">
-      <img src="images/services-title.jpg" class="description-img" alt="">
+      <!-- <img src="images/services-title.jpg" class="description-img" alt=""> -->
+       <h1 class="centered-text">Services</h1>
       <div class="description-details">
         <div><img src="images/services/img1.jpg" class="service-img" alt=""></div>
         <div><img src="images/services/img2.jpg" class="service-img" alt=""></div>
@@ -63,29 +71,98 @@
       </div>
     </div>
   </div>
-  <img src="images/partners-title.jpg" class="description-img" alt="" id="partners">
+
+  <!-- News & Events -->
+  <h1 id="news" class="centered-text">News & Events</h1>
+  <div class="container">
+    <div class="flex-container">
+      <div class="flex-item">
+        <iframe width="400" height="200" src="https://www.youtube.com/embed/Cp0n7vXJjzE" title="Interview by Dr  NKURANGA Charles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="flex-item">
+        <em>By Dr Charles Nkuranga - Oct 20, 2025</em><hr>
+        Ubwishingizi bw'Amatungo mu Rwanda, Dr Charles Nkuranga is about to post Mortem Examination in Rwanda animal resources. Ubwishingizi bw'Amatungo mu Rwanda, Dr Charles Nkuranga is about to post Mortem Examination in Rwanda animal resources.
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item">
+        <iframe width="400" height="200" src="https://www.youtube.com/embed/N_P9Hth5Qe0" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="flex-item">
+        <em>New Veterinary Doctors Sworn In by RCVD-RTV Report - Nov 4, 2024</em><hr>
+        In this special coverage by RTV, we celebrate the swearing-in of a new cohort of veterinary doctors, officially recognized by the Rwanda Council of Veterinary Doctors (RCVD). Join us as we witness these dedicated individuals take their oaths to uphold the highest standards of veterinary care and compassion. 
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item">
+        <iframe width="400" height="200" src="https://www.youtube.com/embed/7600gcFtOZA" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="flex-item">
+        <em>OATH TAKING AND INDUCTION CEREMONY OF VETERINARY GRADUATES 2024 - Nov 19, 2024</em><hr>
+        Welcome to the official Oath Taking and Induction Ceremony of the Veterinary Graduates of 2024, organized by the Rwanda Council of Veterinary Doctors (RCVD). Join us as we celebrate the achievements of the newest batch of veterinary professionals, marking their transition from students to certified practitioners. Witness the inspiring moments as they take their solemn oath to serve animals, society, and the profession with integrity and compassion.
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item">
+        <iframe width="400" height="200" src="https://www.youtube.com/embed/IBAsnecKMos" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="flex-item">
+        <em>Rwanda's First Annual Veterinary Scientific Conference 2019 - Oct 31, 2024</em><hr>
+        This video covers the inaugural Veterinary Scientific Conference in Rwanda, a groundbreaking event bringing together veterinary professionals, researchers, and policymakers to explore advancements in animal health, disease control, and sustainable livestock practices. Hosted by key Rwandan veterinary and agricultural organizations, this conference marks a milestone in the country’s commitment to building a resilient veterinary sector. In pursuit of Quality and reliable veterinary services.
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item">
+        <iframe width="400" height="200" src="https://www.youtube.com/embed/Wby9Z09WGt0" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="flex-item">
+        <em>USAID RDCP II Capacity Building Program for Veterinary Practitioners - Oct 31, 2024</em><hr>
+        This video highlights the USAID Rwanda Dairy Competitiveness Program II (RDCP II), focusing on its impactful capacity-building initiatives for veterinary practitioners. Through targeted training and resources, this program empowers veterinary professionals to improve animal health standards, enhance dairy productivity, and support the growth of Rwanda's dairy sector. Don't forget to subscribe for further content. Thanks.
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item">
+        <iframe width="400" height="200" src="https://www.youtube.com/embed/xRqTSKJk-0I" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <div class="flex-item">
+        <em>Inside the Veterinary Postmortem Training by MINAGRI and RCVD - Oct 31, 2024</em><hr>
+        This video provides an inside look at the Veterinary Postmortem Course organized by the Ministry of Agriculture and Animal Resources (MINAGRI) in collaboration with the Rwanda Council of Veterinary Doctors (RCVD). This essential training program equips veterinary practitioners with critical skills in conducting animal postmortems to improve livestock health and support disease management across Rwanda.
+      </div>
+    </div>
+  </div>
+  <!-- End News & Events -->
+
+   <h1 id="partners" class="centered-text">Partners</h1>
    <section class="partners-slider">
     <div class="slider-track">
       <div class="sliding"><img src="images/partners/minagri.png" alt="Partner 1"></div>
       <div class="sliding"><img src="images/partners/ifad.png" alt="Partner 2"></div>
+      <div class="sliding"><img src="images/partners/rab.png" alt="Partner 4"></div>
+      <div class="sliding"><img src="images/partners/usaid.png" alt="Partner 3"></div>
+      <div class="sliding"><img src="images/partners/naeb.jpg" alt="Partner 4"></div>
+      <div class="sliding"><img src="images/partners/fao.jpg" alt="Partner 4"></div>
+      <div class="sliding"><img src="images/partners/ur.png" alt="Partner 4"></div>
+      <div class="sliding"><img src="images/partners/oaf.png" alt="Partner 4"></div>
+      <div class="sliding"><img src="images/partners/vsf.jpg" alt="Partner 4"></div>
+
+      <!-- Duplicate for seamless infinite scroll -->
+      <div class="sliding"><img src="images/partners/minagri.png" alt="Partner 1"></div>
+      <div class="sliding"><img src="images/partners/ifad.png" alt="Partner 2"></div>
+      <div class="sliding"><img src="images/partners/rab.png" alt="Partner 4"></div>
       <div class="sliding"><img src="images/partners/usaid.png" alt="Partner 3"></div>
       <div class="sliding"><img src="images/partners/vsf.jpg" alt="Partner 4"></div>
 
       <!-- Duplicate for seamless infinite scroll -->
       <div class="sliding"><img src="images/partners/minagri.png" alt="Partner 1"></div>
       <div class="sliding"><img src="images/partners/ifad.png" alt="Partner 2"></div>
+      <div class="sliding"><img src="images/partners/rab.png" alt="Partner 4"></div>
       <div class="sliding"><img src="images/partners/usaid.png" alt="Partner 3"></div>
       <div class="sliding"><img src="images/partners/vsf.jpg" alt="Partner 4"></div>
 
       <!-- Duplicate for seamless infinite scroll -->
       <div class="sliding"><img src="images/partners/minagri.png" alt="Partner 1"></div>
       <div class="sliding"><img src="images/partners/ifad.png" alt="Partner 2"></div>
-      <div class="sliding"><img src="images/partners/usaid.png" alt="Partner 3"></div>
-      <div class="sliding"><img src="images/partners/vsf.jpg" alt="Partner 4"></div>
-
-      <!-- Duplicate for seamless infinite scroll -->
-      <div class="sliding"><img src="images/partners/minagri.png" alt="Partner 1"></div>
-      <div class="sliding"><img src="images/partners/ifad.png" alt="Partner 2"></div>
+      <div class="sliding"><img src="images/partners/rab.png" alt="Partner 4"></div>
       <div class="sliding"><img src="images/partners/usaid.png" alt="Partner 3"></div>
       <div class="sliding"><img src="images/partners/vsf.jpg" alt="Partner 4"></div>
     </div>
@@ -94,8 +171,8 @@
 
   <div class="rcvd-map">
     <section class="map-section">
-      <h2>Find Us</h2>
-      <div class="map-container">
+      <h1>Find us</h1>
+      <div class="container">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.739774927091!2d30.08562407496445!3d-1.9432266980318088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6fb0a85e7a7%3A0xe0f7dd6d2c876415!2sMINAGRI!5e0!3m2!1sen!2srw!4v1697038264795!5m2!1sen!2srw"
           width="100%"
