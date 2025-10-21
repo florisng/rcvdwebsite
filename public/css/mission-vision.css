@@ -1,0 +1,10 @@
+.mission-vision img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+.mission-vision-text {
+    font-size: 22px;
+    font-style: italic;
+}
