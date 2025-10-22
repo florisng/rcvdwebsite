@@ -4,62 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="css/style.css">
-  <title>About RCVD</title>
+  <title>RCVD - Announcement</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    header {
-      background-color: #004080;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    }
-
-    section {
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
       padding: 2rem;
+      background-color: #fff;
     }
 
     h2 {
-      color: #004080;
-      margin-top: 0;
+      color: #2c3e50;
+      margin-bottom: 1rem;
     }
 
     p {
-      font-size: 1rem;
-      line-height: 1.6;
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
     }
 
-    ul {
+    .announcement ul {
       margin-top: 1rem;
       padding-left: 1.5rem;
+      list-style: none;
     }
 
-    ul li {
+    .announcement ul li {
+      position: relative;
+      padding-left: 1.8rem;
       margin-bottom: 0.6rem;
-      font-size: 0.98rem;
+      font-size: 1rem;
+    }
+
+    .announcement ul li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1rem;
+      color: green;
     }
 
     @media (max-width: 600px) {
-      section {
+      .container {
         padding: 1.5rem 1rem;
       }
     }
@@ -67,22 +54,26 @@
 </head>
 <body>
   <%- include('partials/header') %>
-  <main>
-    <section>
-      <h2>Our Mission</h2>
-      <p>
-        RCVD is a regulatory body mandated to regulate the veterinary profession. Its general mission is to ensure that its members (veterinary professionals and para-professionals) provide quality and reliable services in the following areas:
-      </p>
 
-      <ul>
-        <li>Curative and preventive veterinary medicine</li>
-        <li>Animal reproduction</li>
-        <li>Veterinary pharmacy practice and use of inputs and livestock equipment</li>
-        <li>Hygiene and quality of animal products</li>
-        <li>Wild animal medicine</li>
-      </ul>
-    </section>
-  </main>
-  <%- include('partials/footer6') %>
+  <div class="container announcement">
+    <main>
+      <section>
+        <h2>Announcement</h2>
+        <p>
+          RCVD is a regulatory body mandated to regulate the veterinary profession. Its general mission is to ensure that its members (veterinary professionals and para-professionals) provide quality and reliable services in the following areas:
+        </p>
+
+        <ul>
+          <li>Curative and preventive veterinary medicine</li>
+          <li>Animal reproduction</li>
+          <li>Veterinary pharmacy practice and use of inputs and livestock equipment</li>
+          <li>Hygiene and quality of animal products</li>
+          <li>Wild animal medicine</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <%- include('partials/footer') %>
 </body>
 </html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Legal Documents - RCVD</title>
+  <style>
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #fff;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .legal ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+      list-style: none;
+    }
+
+    .legal ul li {
+      position: relative;
+      padding-left: 1.8rem;
+      margin-bottom: 0.6rem;
+      font-size: 1rem;
+    }
+
+    .legal ul li::before {
+      content: "📄";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 1rem;
+      color: #2c3e50;
+    }
+
+    a.doc-link {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    a.doc-link:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.5rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <div class="container legal">
+    <main>
+      <section>
+        <h2>Legal Documents</h2>
+        <p>
+          Below is a list of key legal documents governing the operations, ethics, and responsibilities of veterinary professionals under RCVD:
+        </p>
+        <ul>
+          <li><a href="/docs/veterinary-code-of-conduct.pdf" class="doc-link" target="_blank">Veterinary Code of Conduct</a></li>
+          <li><a href="/docs/animal-health-act.pdf" class="doc-link" target="_blank">Animal Health Act</a></li>
+          <li><a href="/docs/rcvd-regulations-2022.pdf" class="doc-link" target="_blank">RCVD Regulations (2022)</a></li>
+          <li><a href="/docs/professional-license-requirements.pdf" class="doc-link" target="_blank">Professional Licensing Requirements</a></li>
+          <li><a href="/docs/ethics-and-disciplinary-actions.pdf" class="doc-link" target="_blank">Ethics and Disciplinary Procedures</a></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

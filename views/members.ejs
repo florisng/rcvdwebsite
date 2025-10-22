@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <title>RCVD - Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin-dashboard.css">
+  <link rel="stylesheet" href="css/admin-nav.css">
+</head>
+<body>
+  <%- include('partials/admin-header') %>
+
+  <div class="dashboard-container">
+    <h1>Members</h1>
+    <div>
+      <div class="dashboard-actions">
+        <a href="/admin-create-user" class="btn-action">+ Create member</a>
+      </div>
+
+      <% if (error) { %>
+        <div class="error-message"><%= error %></div>
+      <% } %>
+
+      
+    </div>
+  </div>
+
+  <%- include('partials/admin-footer') %>
+
+  <script src="/js/menu.js"></script>
+</body>
+</html>
