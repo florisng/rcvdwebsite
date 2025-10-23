@@ -1,57 +1,92 @@
-<header class="site-header fixed-header">
-<div class="header-container">
-<!-- Logo -->
-<a href="/" class="logo-container">
-<img src="/images/logo.png" alt="RCVD Logo" class="logo">
-</a>
+<!-- ==============================
+     HEADER
+============================== -->
+<header class="site-header">
+  <div class="header-container">
+    <!-- Logo -->
+    <a href="/" class="logo-container">
+      <img src="/images/logo.png" alt="RCVD Logo" class="logo" />
+      <span class="site-title">RCVD</span>
+    </a>
 
+    <!-- Hamburger -->
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      &#9776;
+    </button>
 
-<!-- Hamburger -->
-<button class="menu-toggle">&#9776;</button>
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <ul class="nav-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#services">Services</a></li>
 
+        <li class="dropdown">
+          <a href="#">Publication ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="/announcement">Announcement</a></li>
+            <li><a href="/legal-doc">Legal Document</a></li>
+            <li><a href="/job-board">Jobs</a></li>
+          </ul>
+        </li>
 
-<!-- Navigation -->
-<nav class="main-nav">
-<ul class="nav-list">
-<li><a href="/">Home</a></li>
-<li><a href="/#services">Services</a></li>
-<li class="dropdown">
-<a href="#">Publication ▾</a>
-<ul class="dropdown-menu">
-<li><a href="/announcement">Announcement</a></li>
-<li><a href="/legal-doc">Legal Document</a></li>
-<li><a href="/job-board">Jobs</a></li>
-</ul>
-</li>
-<li class="dropdown">
-<a href="#">CPD ▾</a>
-<ul class="dropdown-menu">
-<li><a href="/#service-provide">Service provide</a></li>
-<li><a href="/#service-provide">CPD Forums</a></li>
-<li><a href="/#service-provide">CPD Guidelines</a></li>
-</ul>
-</li>
-<li class="dropdown">
-<a href="#">Registration ▾</a>
-<ul class="dropdown-menu">
-<li><a href="/rcvd-member">RCVD Member</a></li>
-<li><a href="/license">License</a></li>
-</ul>
-</li>
-<li class="dropdown">
-<a href="#">About us ▾</a>
-<ul class="dropdown-menu">
-<li><a href="/mandate">RCVD Mandate</a></li>
-<li><a href="/board-members">Board members</a></li>
-<li><a href="/contact">Contact us</a></li>
-</ul>
-</li>
-<li>
-<a href="http://localhost:4000" target="_blank" class="start-learning">
-<i class="fas fa-graduation-cap"></i> Start Learning
-</a>
-</li>
-</ul>
-</nav>
-</div>
+        <li class="dropdown">
+          <a href="#">CPD ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="/#service-provider">Service Providers</a></li>
+            <li><a href="/#service-provider">CPD Forums</a></li>
+            <li><a href="/#service-provider">CPD Guidelines</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">Registration ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="/rcvd-member">RCVD Member</a></li>
+            <li><a href="/license">License</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#">About Us ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="/mandate">RCVD Mandate</a></li>
+            <li><a href="/board-members">Board Members</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="http://localhost:4000" target="_blank" class="start-learning">
+            <i class="fas fa-graduation-cap"></i> Start Learning
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.main-nav');
+
+  // Hamburger toggle
+  toggleBtn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    toggleBtn.setAttribute(
+      'aria-expanded',
+      nav.classList.contains('active') ? 'true' : 'false'
+    );
+  });
+
+  // Mobile dropdown toggle
+  document.querySelectorAll('.dropdown > a').forEach((dropdownToggle) => {
+    dropdownToggle.addEventListener('click', (e) => {
+      if (window.innerWidth <= 992) {
+        e.preventDefault();
+        dropdownToggle.parentElement.classList.toggle('active');
+      }
+    });
+  });
+});
+</script>

@@ -1,0 +1,70 @@
+    /* ===== FOOTER STYLES ===== */
+    footer {
+      background-color: #23b14d; /* dark gray */
+      color: #d1d5db; /* light gray text */
+      padding: 60px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-column h3 {
+      color: #ffffff;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+      color: #d1d5db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+      color: #ffffff;
+    }
+
+    .footer-contact img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .footer-contact p {
+      font-size: 0.9rem;
+      margin: 4px 0;
+      line-height: 1.4;
+    }
+
+    .footer-contact a {
+      color: #d1d5db;
+      text-decoration: none;
+    }
+
+    .footer-contact a:hover {
+      color: #ffffff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #23b14d;
+      color: #d1d5db;
+      font-size: 0.85rem;
+    }

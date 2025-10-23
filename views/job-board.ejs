@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RCVD - Job Board</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
   <style>
 
     .job-board {
@@ -60,49 +62,12 @@
 </head>
 <body>
   <%- include('partials/header') %>
-  <h1 class="centered-text">Job Board</h1>
+  <div class="container">
+    <h1 class="centered-text">Job Board</h1>
   <p class="centered-text"><em>"Explore current job openings published by companies"</em></p>
-
-  <div class="job-board">
-
-    <!-- Job 1 -->
-    <div class="job-card">
-      <div class="job-title">Frontend Web Developer</div>
-      <div class="job-description">
-        We're seeking a skilled frontend developer with experience in HTML, CSS, and JavaScript to build responsive and user-friendly web interfaces.
-      </div>
-      <div class="job-meta">
-        <span>📅 Posted: October 15, 2025</span>
-        <span>⏳ Deadline: November 15, 2025</span>
-      </div>
-    </div>
-
-    <!-- Job 2 -->
-    <div class="job-card">
-      <div class="job-title">Marketing & Communications Officer</div>
-      <div class="job-description">
-        Join our growing team to develop communication strategies and manage content across our digital platforms. Experience in content writing is a plus.
-      </div>
-      <div class="job-meta">
-        <span>📅 Posted: October 10, 2025</span>
-        <span>⏳ Deadline: November 5, 2025</span>
-      </div>
-    </div>
-
-    <!-- Job 3 -->
-    <div class="job-card">
-      <div class="job-title">Data Analyst (Remote)</div>
-      <div class="job-description">
-        Analyze business data and generate insights to help guide decision-making. Must have experience with SQL and data visualization tools.
-      </div>
-      <div class="job-meta">
-        <span>📅 Posted: October 18, 2025</span>
-        <span>⏳ Deadline: November 18, 2025</span>
-      </div>
-    </div>
-
-    <!-- Add more job postings below -->
-    
+  <p>
+    There is no current opening jobs.
+  </p>
   </div>
   <%- include('partials/footer') %>
 </body>

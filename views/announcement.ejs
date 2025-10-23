@@ -4,74 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
   <title>RCVD - Announcement</title>
-  <style>
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: #fff;
-    }
-
-    h2 {
-      color: #2c3e50;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1.05rem;
-      margin-bottom: 1.2rem;
-    }
-
-    .announcement ul {
-      margin-top: 1rem;
-      padding-left: 1.5rem;
-      list-style: none;
-    }
-
-    .announcement ul li {
-      position: relative;
-      padding-left: 1.8rem;
-      margin-bottom: 0.6rem;
-      font-size: 1rem;
-    }
-
-    .announcement ul li::before {
-      content: "✅";
-      position: absolute;
-      left: 0;
-      top: 0;
-      font-size: 1rem;
-      color: green;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 1.5rem 1rem;
-      }
-    }
-  </style>
 </head>
 <body>
   <%- include('partials/header') %>
 
-  <div class="container announcement">
-    <main>
-      <section>
-        <h2>Announcement</h2>
-        <p>
-          RCVD is a regulatory body mandated to regulate the veterinary profession. Its general mission is to ensure that its members (veterinary professionals and para-professionals) provide quality and reliable services in the following areas:
-        </p>
-
-        <ul>
-          <li>Curative and preventive veterinary medicine</li>
-          <li>Animal reproduction</li>
-          <li>Veterinary pharmacy practice and use of inputs and livestock equipment</li>
-          <li>Hygiene and quality of animal products</li>
-          <li>Wild animal medicine</li>
-        </ul>
-      </section>
-    </main>
+  <div class="container">
+    <h1>Announcemenet</h1>
+    <p>There is no current announcement</p>
   </div>
 
   <%- include('partials/footer') %>

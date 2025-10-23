@@ -1,0 +1,31 @@
+Make me a header with info below:
+
+1. A logo <img src="/images/logo.png" />
+2. Home
+3. Services
+4. Publication
+    - Announcement
+    - Legal Document
+    - Jobs
+5. CPD
+    - Service Providers
+    - CPD Forums
+    - CPD Guidelines
+6. Registration
+    - RCVD Member
+    - License
+7. About Us
+    - RCVD Mandate
+    - Board Members
+    - Contact Us
+8. A button called "Start Learning"
+
+For instance: Publication has a dropdown with Announcement, Legal, document and Jobs links
+
+The logo should be at the left and the nav bar at the right
+
+The header should be fixed when scrolling, backgrdound: #23b14d, color: #fff
+
+Do it elegant and professional with a burger for responsiveness
+
+Remember it's just a div so don't give me any html or body tag
