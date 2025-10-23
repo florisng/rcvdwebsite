@@ -10,14 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
 
   <title>RCVD - Home</title>
+  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/slide.css">
   <link rel="stylesheet" href="css/description.css">
   <link rel="stylesheet" href="css/sliding.css">
   <link rel="stylesheet" href="css/google-map.css">
   <link rel="stylesheet" href="css/mission-vision.css">
+  <link rel="stylesheet" href="css/service-providers.css">
   <link rel="stylesheet" href="css/news-events.css">
   <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/activities.css">
 </head>
 <body>
   <%- include('partials/header') %>
@@ -43,8 +46,20 @@
       <div><img src="images/values.png" alt=""></div>
       <div class="mission-vision-text centered-text">"Professionalism, Integrity, Accountability, Excellence in Service, Teamwork and Collaboration"</div>
     </div>
+  </div>
 
+    <div class="registration-wrapper">
+      <!-- Existing registration content remains here -->
+    </div>
 
+    <!-- Parallax Section -->
+    <div class="parallax-section">
+      <div class="overlay">
+        <h2 class="parallax-title">Empowering Veterinary Excellence</h2>
+        <p class="parallax-subtitle">Dedicated to professionalism, integrity, and animal health across Rwanda and beyond.</p>
+      </div>
+    </div>
+  <div class="container">
     <div id="services">
       <h1>Our services</h1>
       <hr>
@@ -155,66 +170,109 @@
       </div>
     </div>
 
-    <!-- News & Events -->
-    <h1 id="news">News & Events</h1>
-    <div class="container">
-      <div class="flex-container">
-        <div class="flex-item">
-          <iframe width="400" height="200" src="https://www.youtube.com/embed/Cp0n7vXJjzE" title="Interview by Dr  NKURANGA Charles" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="flex-item">
-          <em>By Dr Charles Nkuranga - Oct 20, 2025</em><hr>
-          Ubwishingizi bw'Amatungo mu Rwanda, Dr Charles Nkuranga is about to post Mortem Examination in Rwanda animal resources. Ubwishingizi bw'Amatungo mu Rwanda, Dr Charles Nkuranga is about to post Mortem Examination in Rwanda animal resources.
-        </div>
-      </div>
-      <div class="flex-container">
-        <div class="flex-item">
-          <iframe width="400" height="200" src="https://www.youtube.com/embed/N_P9Hth5Qe0" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="flex-item">
-          <em>New Veterinary Doctors Sworn In by RCVD-RTV Report - Nov 4, 2024</em><hr>
-          In this special coverage by RTV, we celebrate the swearing-in of a new cohort of veterinary doctors, officially recognized by the Rwanda Council of Veterinary Doctors (RCVD). Join us as we witness these dedicated individuals take their oaths to uphold the highest standards of veterinary care and compassion. 
+    <div class="">
+      <!-- Recent Activities -->
+      <div class="card activity-card">
+        <div class="card-image" style="background-image: url('images/events/moto1.jpg');"></div>
+        <div class="card-content">
+          <h3>Recent Activities</h3>
+          <ul>
+            <li>Handover of 134 motorcycles and veterinary kits to privates under sanitary Mandate</li>
+            <li>World Veterinary Day 2025</li>
+          </ul>
         </div>
       </div>
-      <div class="flex-container">
-        <div class="flex-item">
-          <iframe width="400" height="200" src="https://www.youtube.com/embed/7600gcFtOZA" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="flex-item">
-          <em>OATH TAKING AND INDUCTION CEREMONY OF VETERINARY GRADUATES 2024 - Nov 19, 2024</em><hr>
-          Welcome to the official Oath Taking and Induction Ceremony of the Veterinary Graduates of 2024, organized by the Rwanda Council of Veterinary Doctors (RCVD). Join us as we celebrate the achievements of the newest batch of veterinary professionals, marking their transition from students to certified practitioners. Witness the inspiring moments as they take their solemn oath to serve animals, society, and the profession with integrity and compassion.
-        </div>
-      </div>
-      <div class="flex-container">
-        <div class="flex-item">
-          <iframe width="400" height="200" src="https://www.youtube.com/embed/IBAsnecKMos" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="flex-item">
-          <em>Rwanda's First Annual Veterinary Scientific Conference 2019 - Oct 31, 2024</em><hr>
-          This video covers the inaugural Veterinary Scientific Conference in Rwanda, a groundbreaking event bringing together veterinary professionals, researchers, and policymakers to explore advancements in animal health, disease control, and sustainable livestock practices. Hosted by key Rwandan veterinary and agricultural organizations, this conference marks a milestone in the country’s commitment to building a resilient veterinary sector. In pursuit of Quality and reliable veterinary services.
-        </div>
-      </div>
-      <div class="flex-container">
-        <div class="flex-item">
-          <iframe width="400" height="200" src="https://www.youtube.com/embed/Wby9Z09WGt0" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="flex-item">
-          <em>USAID RDCP II Capacity Building Program for Veterinary Practitioners - Oct 31, 2024</em><hr>
-          This video highlights the USAID Rwanda Dairy Competitiveness Program II (RDCP II), focusing on its impactful capacity-building initiatives for veterinary practitioners. Through targeted training and resources, this program empowers veterinary professionals to improve animal health standards, enhance dairy productivity, and support the growth of Rwanda's dairy sector. Don't forget to subscribe for further content. Thanks.
-        </div>
-      </div>
-      <div class="flex-container">
-        <div class="flex-item">
-          <iframe width="400" height="200" src="https://www.youtube.com/embed/xRqTSKJk-0I" title="New Veterinary Doctors" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div class="flex-item">
-          <em>Inside the Veterinary Postmortem Training by MINAGRI and RCVD - Oct 31, 2024</em><hr>
-          This video provides an inside look at the Veterinary Postmortem Course organized by the Ministry of Agriculture and Animal Resources (MINAGRI) in collaboration with the Rwanda Council of Veterinary Doctors (RCVD). This essential training program equips veterinary practitioners with critical skills in conducting animal postmortems to improve livestock health and support disease management across Rwanda.
+
+
+      <!-- Upcoming Events -->
+      <div class="card event-card">
+        <div class="card-image" style="background-image: url('images/events/event2.jpg');"></div>
+        <div class="card-content">
+          <h3>Upcoming Events</h3>
+          <ul>
+            <li>Oath Taking and induction ceremony, 2025 on 31 Oct, 2025</li>
+            <li>Training: Advancing One Health Program in Rwanda by RAB-UGHE &amp; RCVD</li>
+          </ul>
         </div>
       </div>
     </div>
-    <!-- End News & Events -->
-   </div>
+</div>
+
+  <div class="container">
+    <div class="cpd-providers-section">
+      <h1>CPD Service Providers</h1>
+      <div class="cpd-grid">
+          <div class="cpd-row"><div class="cpd-name">NEW VISION VETERINARY HOSPITAL</div><div class="cpd-contact">0726 338 145</div></div>
+          <div class="cpd-row"><div class="cpd-name">UMUCYO VET KONSULTS LTD</div><div class="cpd-contact">0788 857 504</div></div>
+          <div class="cpd-row"><div class="cpd-name">VISION AGRI BUSINESS FARM LTD</div><div class="cpd-contact">0788 590 416</div></div>
+          <div class="cpd-row"><div class="cpd-name">AGROVET-CARE Ltd</div><div class="cpd-contact">0782 864 688</div></div>
+          <div class="cpd-row"><div class="cpd-name">Rwanda Animal Welfare Organization</div><div class="cpd-contact">0788 816 766</div></div>
+          <div class="cpd-row"><div class="cpd-name">AFRICA AGRIVET SERVICES Ltd</div><div class="cpd-contact">0782 715 139</div></div>
+          <div class="cpd-row"><div class="cpd-name">Dr HABIMANA Jean Paul</div><div class="cpd-contact">0788 534 046</div></div>
+          <div class="cpd-row"><div class="cpd-name">RAHGICO Ltd</div><div class="cpd-contact">0788 784 935</div></div>
+          <div class="cpd-row"><div class="cpd-name">BAFIN AGROVET SERVICES</div><div class="cpd-contact">0788 471 223</div></div>
+          <div class="cpd-row"><div class="cpd-name">WAG</div><div class="cpd-contact">0783 932 689</div></div>
+          <div class="cpd-row"><div class="cpd-name">MUYUMBU BREEDING PI FARM</div><div class="cpd-contact">0788 426 538</div></div>
+          <div class="cpd-row"><div class="cpd-name">INGENZI AGRI VET</div><div class="cpd-contact">0787 889 063</div></div>
+          <div class="cpd-row"><div class="cpd-name">DAS</div><div class="cpd-contact">0786 490 305</div></div>
+      </div>
+      <p class="note">Instructions and Forms required are attached in legal instruments.</p>
+    </div>
+  </div>
+
+<div class="">
+    <!-- News & Events -->
+<h1 id="news" class="centered-text">News & Events</h1>
+<div class="container">
+<div class="flex-grid">
+
+
+<div class="flex-item">
+<iframe src="https://www.youtube.com/embed/Cp0n7vXJjzE" title="Interview by Dr NKURANGA Charles" frameborder="0" allowfullscreen></iframe>
+<em>By Dr Charles Nkuranga - Oct 20, 2025</em><hr>
+Ubwishingizi bw'Amatungo mu Rwanda, Dr Charles Nkuranga is about to post Mortem Examination in Rwanda animal resources.
+</div>
+
+
+<div class="flex-item">
+<iframe src="https://www.youtube.com/embed/N_P9Hth5Qe0" title="New Veterinary Doctors" frameborder="0" allowfullscreen></iframe>
+<em>New Veterinary Doctors Sworn In by RCVD-RTV Report - Nov 4, 2024</em><hr>
+In this special coverage by RTV, we celebrate the swearing-in of a new cohort of veterinary doctors, officially recognized by the Rwanda Council of Veterinary Doctors (RCVD).
+</div>
+
+
+<div class="flex-item">
+<iframe src="https://www.youtube.com/embed/7600gcFtOZA" title="Oath Taking" frameborder="0" allowfullscreen></iframe>
+<em>OATH TAKING AND INDUCTION CEREMONY OF VETERINARY GRADUATES 2024 - Nov 19, 2024</em><hr>
+Welcome to the official Oath Taking and Induction Ceremony of the Veterinary Graduates of 2024.
+</div>
+
+
+<div class="flex-item">
+<iframe src="https://www.youtube.com/embed/IBAsnecKMos" title="Veterinary Conference" frameborder="0" allowfullscreen></iframe>
+<em>Rwanda's First Annual Veterinary Scientific Conference 2019 - Oct 31, 2024</em><hr>
+This video covers the inaugural Veterinary Scientific Conference in Rwanda.
+</div>
+
+
+<div class="flex-item">
+<iframe src="https://www.youtube.com/embed/Wby9Z09WGt0" title="USAID RDCP II" frameborder="0" allowfullscreen></iframe>
+<em>USAID RDCP II Capacity Building Program for Veterinary Practitioners - Oct 31, 2024</em><hr>
+Highlights the USAID Rwanda Dairy Competitiveness Program II (RDCP II) capacity-building initiatives.
+</div>
+
+
+<div class="flex-item">
+<iframe src="https://www.youtube.com/embed/xRqTSKJk-0I" title="Postmortem Training" frameborder="0" allowfullscreen></iframe>
+<em>Inside the Veterinary Postmortem Training by MINAGRI and RCVD - Oct 31, 2024</em><hr>
+Provides an inside look at the Veterinary Postmortem Course organized by MINAGRI and RCVD.
+</div>
+
+
+</div>
+</div>
+</div>
+
 
    <h1 id="partners" class="centered-text">Partners</h1>
    <section class="partners-slider">

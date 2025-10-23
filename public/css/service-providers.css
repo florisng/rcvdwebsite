@@ -1,0 +1,113 @@
+.activities-events-section .card-image {
+    width: 100%;
+    height: 300px; /* increased height */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.activities-events-section .card {
+    flex: 1 1 45%;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+.activities-events-section .card:hover {
+    transform: translateY(-5px);
+}
+
+.activities-events-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.activities-events-section .card-content {
+    padding: 20px;
+}
+
+.activities-events-section .card-content h3 {
+    font-size: 1.6rem;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.activities-events-section .card-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.activities-events-section .card-content ul li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: #374151;
+}
+
+.activities-events-section .card-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #0ea5a4;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .activities-events-section {
+    flex-direction: column;
+    }
+    .activities-events-section .card {
+    flex: 1 1 100%;
+    }
+}
+
+.cpd-providers-section {
+max-width: 1000px;
+margin: 60px auto;
+background: #ffffff;
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+transition: all 0.3s ease;
+}
+
+
+.cpd-providers-section h2 {
+font-size: 2.2rem;
+color: #0f172a;
+margin-bottom: 30px;
+border-bottom: 3px solid #0ea5a4;
+display: inline-block;
+padding-bottom: 8px;
+}
+
+
+.cpd-grid {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+
+.cpd-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 12px 18px;
+background: linear-gradient(90deg, #e0f7fa 0%, #f0f9ff 100%);
+border-radius: 12px;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+.cpd-row:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
