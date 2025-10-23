@@ -29,6 +29,7 @@ app.get('/job-board', (req, res) => res.render('job-board'));
 app.get('/board-members', (req, res) => res.render('board-members'));
 app.get('/legal-doc', (req, res) => res.render('legal-doc'));
 app.get('/license', (req, res) => res.render('license'));
+app.get('/mandate', (req, res) => res.render('mandate'));
 app.get('/announcement', (req, res) => {
   res.render('announcement', { error: null });
 });
@@ -71,7 +72,6 @@ app.get('/admin-dashboard', async (req, res) => {
     });
   }
 });
-
 
 // Contact form POST
 app.use(express.json()); // needed for JSON parsing

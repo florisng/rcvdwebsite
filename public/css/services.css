@@ -1,0 +1,54 @@
+.registration-wrapper {
+    background: #f8fafc; padding: 40px 20px; border-radius: 16px; box-shadow: 0 8px 24px rgba(15,23,42,0.05); max-width: 1000px; margin: 0 auto;
+}
+.reg-header {
+    text-align: center; margin-bottom: 32px;
+}
+.reg-header h2 {
+    font-size: 26px; font-weight: 700; color: #0f172a; margin: 0;
+}
+.reg-header .subtitle {
+    font-size: 15px; color: #64748b; margin-top: 6px;
+}
+.card {
+    background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 20px; border: 1px solid rgba(15,23,42,0.06); box-shadow: 0 4px 12px rgba(15,23,42,0.04);
+}
+.card h3 {
+    margin-top: 0; color: #0f172a; font-size: 18px; font-weight: 600;
+}
+.styled-list {
+    list-style: none; padding-left: 0; margin: 10px 0 0 0;
+}
+.styled-list li {
+    padding-left: 22px; position: relative; margin-bottom: 8px; line-height: 1.6; color: #374151;
+}
+.styled-list li::before {
+    content: "•"; position: absolute; left: 0; color: #0ea5a4; font-weight: bold;
+}
+.columns {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;
+}
+.fees-table {
+    width: 100%; border-collapse: collapse; margin-top: 10px;
+}
+.fees-table th, .fees-table td {
+    border: 1px solid rgba(15,23,42,0.08); padding: 10px 14px; text-align: left;
+}
+.fees-table th {
+    background: #f1f5f9; color: #0f172a; font-weight: 600;
+}
+.fees-table td {
+    color: #374151;
+}
+.note {
+    font-size: 14px; color: #0369a1; background: #e0f2fe; padding: 10px 14px; border-radius: 10px; margin-top: 10px;
+}
+.highlight {
+    color: #0ea5a4; font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .registration-wrapper {padding: 20px;}
+  .card {padding: 18px;}
+  .reg-header h2 {font-size: 22px;}
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css">
+  <title>RCVD Mandate — Specific missions</title>
+  <style>
+    main.content
+    {
+      padding:28px 32px;
+    }
+    .missions {
+      display:grid; gap:12px; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .mission {
+      background:var(--glass); border-radius:12px; padding:16px; border:1px solid #23b14d; box-shadow: 0 4px 18px rgba(2,6,23,0.04);
+      display:flex; gap:12px; align-items:flex-start;
+    }
+    .num {
+      width:44px; height:44px; flex-shrink:0; border-radius:10px; background:linear-gradient(180deg,white, #23b14d); color:#fff; display:grid; place-items:center; font-weight:700;
+    }
+    .mission h3{margin:0; font-size:15px}
+    .mission p{margin:6px 0 0 0; color:var(--muted); font-size:14px}
+  </style>
+</head>
+<body>
+  <%- include('partials/header') %>
+  <div class="container">
+    <h1>RCVD Mandate</h1>
+    <hr>
+    <h2>Specific missions</h2>
+    <div class="page" role="document" aria-labelledby="page-title">
+      <main class="content">
+        <section class="missions" aria-label="RCVD specific missions">
+          <article class="mission">
+            <div class="num">1</div>
+            <div>
+              <h3>Control entry to the profession</h3>
+              <p>To control entry of persons into practice of the profession, set professional conditions for admission and decide on applications for the practice of the profession.</p>
+            </div>
+          </article>
+
+          <article class="mission">
+            <div class="num">2</div>
+            <div>
+              <h3>Ensure compliance with rules & standards</h3>
+              <p>To ensure that all members comply with the rules, standards and code of ethics of veterinary profession.</p>
+            </div>
+          </article>
+
+          <article class="mission">
+            <div class="num">3</div>
+            <div>
+              <h3>Protect honor & dignity</h3>
+              <p>To be responsible for the honor and dignity of the veterinary profession.</p>
+            </div>
+          </article>
+
+          <article class="mission">
+            <div class="num">4</div>
+            <div>
+              <h3>Promote the profession's interests</h3>
+              <p>To protect and promote the interest of the veterinary profession.</p>
+            </div>
+          </article>
+
+          <article class="mission">
+            <div class="num">5</div>
+            <div>
+              <h3>Resolve member-client conflicts</h3>
+              <p>To resolve conflicts and settle disputes that may arise between a member of the Council and his/her client.</p>
+            </div>
+          </article>
+
+          <article class="mission">
+            <div class="num">6</div>
+            <div>
+              <h3>Disciplinary oversight</h3>
+              <p>To monitor and exercise disciplinary measures over the members of the Council.</p>
+            </div>
+          </article>
+
+          <article class="mission">
+            <div class="num">7</div>
+            <div>
+              <h3>Contribute to education</h3>
+              <p>To participate in the development of curricula and teaching programs for veterinary doctors, veterinary technicians and other animal husbandry experts.</p>
+            </div>
+          </article>
+
+          <article class="mission">
+            <div class="num">8</div>
+            <div>
+              <h3>Continuous training & mentoring</h3>
+              <p>To regularly train the members of the Council (CPDs) and assist those that have just finished their studies to get experience in the profession.</p>
+            </div>
+          </article>
+
+          <article class="mission">
+            <div class="num">9</div>
+            <div>
+              <h3>Expert intervention</h3>
+              <p>To intervene in cases requiring the expertise of veterinary doctors.</p>
+            </div>
+          </article>
+
+          <article class="mission">
+            <div class="num">10</div>
+            <div>
+              <h3>International cooperation</h3>
+              <p>To cooperate with regional and international Councils.</p>
+            </div>
+          </article>
+
+        </section>
+      </main>
+    </div>
+  </div>
+  <%- include('partials/footer') %>
+</body>
+</html>

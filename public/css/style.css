@@ -291,6 +291,11 @@ ul {
 
 /* Responsive: mobile */
 @media (max-width: 768px) {
+  .container {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   .footer-container {
     flex-direction: column;
     gap: 30px;
