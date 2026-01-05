@@ -3,7 +3,7 @@ name: Deploy Node.js App to rcvd.rw
 on:
   push:
     branches:
-      - main  # Replace if your default branch is different
+      - main  # Trigger deployment on pushes to main
 
 jobs:
   deploy:
@@ -13,17 +13,26 @@ jobs:
       - name: Deploy via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: 197.243.23.178      # Replace with your server IP
-          username: root            # SSH username
+          host: 197.243.23.178
+          username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            # Ensure SSH knows the server
+            mkdir -p ~/.ssh
+            ssh-keyscan -H 197.243.23.178 >> ~/.ssh/known_hosts
+
+            # Go to app folder
             cd /root/rcvdwebsite
-            echo "Pulling latest code..."
+
+            # Pull latest changes from GitHub
             git reset --hard
             git clean -fd
             git pull origin main
-            echo "Installing dependencies..."
+
+            # Install/update dependencies
             npm install --production
-            echo "Reloading Node.js app via PM2..."
+
+            # Reload the app with PM2
             pm2 reload rcvd
+
             echo "Deployment complete!"
