@@ -1,38 +1,28 @@
-name: Deploy Node.js App to rcvd.rw
+name: Deploy Node App
 
+# Trigger the workflow on push to main branch
 on:
   push:
     branches:
-      - main  # Trigger deployment on pushes to main
+      - main
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    # Use your self-hosted runner
+    runs-on: self-hosted
 
     steps:
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@master
-        with:
-          host: 197.243.23.178
-          username: root
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            # Ensure SSH knows the server
-            mkdir -p ~/.ssh
-            ssh-keyscan -H 197.243.23.178 >> ~/.ssh/known_hosts
+      # Step 1: Checkout the code from GitHub
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-            # Go to app folder
-            cd /root/rcvdwebsite
+      # Step 2: Install npm dependencies
+      - name: Install dependencies
+        run: |
+          cd /var/www/rcvdwebsite
+          npm install --production
 
-            # Pull latest changes from GitHub
-            git reset --hard
-            git clean -fd
-            git pull origin main
-
-            # Install/update dependencies
-            npm install --production
-
-            # Reload the app with PM2
-            pm2 reload rcvd
-
-            echo "Deployment complete!"
+      # Step 3: Restart the Node app with PM2
+      - name: Restart app
+        run: |
+          pm2 reload rcvd
