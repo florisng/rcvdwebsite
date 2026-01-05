@@ -4,25 +4,23 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:   # <-- allows manual trigger from Actions tab
 
 jobs:
   deploy:
     runs-on: self-hosted
 
     steps:
-      # Step 1: Checkout repo directly into app folder
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           path: /var/www/rcvdwebsite
 
-      # Step 2: Install dependencies
       - name: Install dependencies
         run: |
           cd /var/www/rcvdwebsite
           npm install --production
 
-      # Step 3: Restart the app with PM2
       - name: Restart app
         run: |
           pm2 reload rcvd
