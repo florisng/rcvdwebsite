@@ -4,23 +4,27 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:   # <-- allows manual trigger from Actions tab
+  workflow_dispatch:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, linux, x64]
+    runs-on: self-hosted
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          path: /var/www/rcvdwebsite
+
+      - name: Deploy files to server directory
+        run: |
+          rsync -av --delete \
+            --exclude node_modules \
+            ./ /var/www/rcvdwebsite/
 
       - name: Install dependencies
         run: |
           cd /var/www/rcvdwebsite
           npm install --production
 
-      - name: Restart app
+      - name: Restart app with PM2
         run: |
-          pm2 reload rcvd
+          pm2 reload rcvd || pm2 start app.js --name rcvd
