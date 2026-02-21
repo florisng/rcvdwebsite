@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 4000;
 
 // Middleware
 // Serve static files from "partials" folder
-app.use('/partials', express.static(path.join(__dirname, 'partials')));
+app.use('/partials', express.static(path.join(__dirname, 'views/partials')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
