@@ -55,6 +55,10 @@ img {vertical-align: middle;}
   top: 0;
 }
 
+.full_width {
+  width: 100%;
+}
+
 /* The dots/bullets/indicators */
 .dot {
   height: 15px;
