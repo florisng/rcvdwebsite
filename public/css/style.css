@@ -28,6 +28,10 @@ h1 {
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
+.register_img {
+  width: 20%;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
