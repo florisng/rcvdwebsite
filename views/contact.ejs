@@ -1,86 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="images/logo.png">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/contact.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <title>RCVD - Contact</title>
-</head>
-<body>
-  <%- include('partials/header') %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <title>RCVD - Contact</title>
+  </head>
+  <body>
+    <%- include('partials/header') %>
 
-  <div class="container">
-    <main>
-      <section>
-        <h1>Let's get in touch</h1>
-        <!-- Message will appear here -->
-        <div id="formMessage" class="form-message"></div>
-        <form id="contactForm" method="POST">
-            <input type="text" id="name" name="name" placeholder="Full name" required>
-            <br>
-            <input type="email" id="email" name="email" placeholder="Email - johndoe@gmail.com" required>
-            <br>
-            <input type="phone" id="phone" name="phone" placeholder="Phone - 078 70 300 24" required>
-            <br>
-            <textarea id="message" name="message" placeholder="Message" required></textarea>
-            <br>
-            <button type="submit">Send Message</button>
-        </form>
+    <div class="container">
+      <main>
+        <section>
+          <h1>Let's get in touch</h1>
+          <!-- Message will appear here -->
+          <div id="formMessage" class="form-message"></div>
+          <form id="contactForm" method="POST">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Full name"
+              required
+            />
+            <br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email: info@rcvd.rw"
+              required
+            />
+            <br />
+            <input
+              type="phone"
+              id="phone"
+              name="phone"
+              placeholder="Phone: 0788 883 525"
+              required
+            />
+            <br />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message here..."
+              required
+            ></textarea>
+            <br />
+            <button type="submit">Send</button>
+          </form>
         </section>
-    </main>
-  </div>
+      </main>
+    </div>
 
-  <%- include('partials/footer') %>
+    <%- include('partials/footer') %>
 
-  <script>
-    const form = document.getElementById('contactForm');
-    const formMessage = document.getElementById('formMessage');
+    <script>
+      const form = document.getElementById("contactForm");
+      const formMessage = document.getElementById("formMessage");
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
 
-      try {
-        const response = await fetch('/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        });
+        try {
+          const response = await fetch("/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
 
-        const result = await response.text();
+          const result = await response.text();
 
-        // Common styles
-        formMessage.style.marginBottom = '30px';
-        formMessage.style.padding = '20px';
-        formMessage.style.color = '#fff';
+          // Common styles
+          formMessage.style.marginBottom = "30px";
+          formMessage.style.padding = "20px";
+          formMessage.style.color = "#fff";
 
-        if (response.ok) {
-          // ✅ Success
-          formMessage.innerHTML = result;
-          formMessage.style.backgroundColor = '#23b14d'; // green
-          form.reset();
-        } else {
-          // ❌ Server returned error (e.g. 400, 500)
-          formMessage.innerHTML = result || 'Something went wrong on the server.';
-          formMessage.style.backgroundColor = '#e74c3c'; // red
+          if (response.ok) {
+            // ✅ Success
+            formMessage.innerHTML = result;
+            formMessage.style.backgroundColor = "#23b14d"; // green
+            form.reset();
+          } else {
+            // ❌ Server returned error (e.g. 400, 500)
+            formMessage.innerHTML =
+              result || "Something went wrong on the server.";
+            formMessage.style.backgroundColor = "#e74c3c"; // red
+          }
+        } catch (error) {
+          // ❌ Network or other unexpected error
+          formMessage.innerHTML =
+            "Oops! Something went wrong. Check your internet connection and try again.";
+          formMessage.style.marginBottom = "30px";
+          formMessage.style.padding = "20px";
+          formMessage.style.color = "#fff";
+          formMessage.style.backgroundColor = "#e74c3c"; // red
         }
-
-      } catch (error) {
-        // ❌ Network or other unexpected error
-        formMessage.innerHTML = 'Oops! Something went wrong. Check your internet connection and try again.';
-        formMessage.style.marginBottom = '30px';
-        formMessage.style.padding = '20px';
-        formMessage.style.color = '#fff';
-        formMessage.style.backgroundColor = '#e74c3c'; // red
-      }
-    });
-</script>
-<script src="/js/menu.js"></script>
-</body>
+      });
+    </script>
+    <script src="/js/menu.js"></script>
+  </body>
 </html>
