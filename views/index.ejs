@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="css/services.css" />
     <link rel="stylesheet" href="css/activities.css" />
     <link rel="stylesheet" href="css/new_videos.css" />
+    <link rel="stylesheet" href="css/announcements.css" />
   </head>
   <body>
     <%- include('partials/header') %>
@@ -62,29 +63,78 @@
 
         <p><img src="images/line.png" class="full_width" alt="Line image" /></p>
 
-        <h2>
-          ITANGAZO RYʼURUGAGA RWʼABAGANGA B’AMATUNGO RIREBANA N'IKIZAMINI CYO
-          KWIYANDIKISHA MU RUGAGA RW'ABAGANGA B’AMATUNGO
-        </h2>
+        <section class="announcements">
+          <h2>Announcements</h2>
 
-        <!-- iframe now points to the static route -->
-        <iframe
-          src="/files/itangazo-file.pdf"
-          width="100%"
-          height="1000px"
-          style="border: none"
-        >
-        </iframe>
+          <table class="announcement-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Announcement</th>
+                <th>Date</th>
+                <th>PDF</th>
+                <th>Registration</th>
+              </tr>
+            </thead>
 
-        <p id="amis">
-          <a
-            href="https://ee.minagri.gov.rw/x/zkBTDHKL"
-            target="_blank"
-            class="link"
-          >
-            <p><img src="images/register.png" class="register_img" alt="" /></p>
-          </a>
-        </p>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ref No: 060/RCVD/2026</td>
+
+                <td>February 2026</td>
+
+                <td>
+                  <a
+                    href="/files/itangazo-file.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    📄 View PDF
+                  </a>
+                </td>
+
+                <td>
+                  <a
+                    href="https://ee.minagri.gov.rw/x/zkBTDHKL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    📝 Register
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+
+                <td>Ref No: 143/RCVD/2026</td>
+
+                <td>July 2026</td>
+
+                <td>
+                  <a
+                    href="/files/itangazo-file-2.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    📄 View PDF
+                  </a>
+                </td>
+
+                <td>
+                  <a
+                    href="https://ee.minagri.gov.rw/x/zkBTDHKL"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    📝 Register
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </div>
 
       <div>
@@ -367,7 +417,7 @@
         <div class="card activity-card">
           <div
             class="card-image"
-            style="background-image: url(&quot;images/events/moto1.JPG&quot;)"
+            style="background-image: url(&quot;images/events/moto1.jpg&quot;)"
           ></div>
           <div class="card-content">
             <h3>Recent Activities</h3>
@@ -385,7 +435,7 @@
         <div class="card event-card">
           <div
             class="card-image"
-            style="background-image: url(&quot;images/events/event2.JPG&quot;)"
+            style="background-image: url(&quot;images/events/event2.jpg&quot;)"
           ></div>
           <div class="card-content">
             <h3>Upcoming Events</h3>
@@ -464,110 +514,184 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="">
       <!-- News & Events -->
       <h1 id="news" class="centered-text">News & Events</h1>
-      <div class="flex-grid">
-        <div class="flex-item">
-          <iframe
-            src="https://www.youtube.com/embed/Cp0n7vXJjzE"
-            title="Interview by Dr NKURANGA Charles"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-          <em>By Dr Charles Nkuranga - Oct 20, 2025</em>
-          <hr />
-          Ubwishingizi bw'Amatungo mu Rwanda, Dr Charles Nkuranga is about to
-          post Mortem Examination in Rwanda animal resources.
-        </div>
+      <div class="container">
+        <div class="flex-grid">
+          <div class="flex-item">
+            <iframe
+              src="https://www.youtube.com/embed/Cp0n7vXJjzE"
+              title="Interview by Dr NKURANGA Charles"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <em>By Dr Charles Nkuranga - Oct 20, 2025</em>
+            <hr />
+            Ubwishingizi bw'Amatungo mu Rwanda, Dr Charles Nkuranga is about to
+            post Mortem Examination in Rwanda animal resources.
+          </div>
 
-        <div class="flex-item">
-          <iframe
-            src="https://www.youtube.com/embed/N_P9Hth5Qe0"
-            title="New Veterinary Doctors"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-          <em
-            >New Veterinary Doctors Sworn In by RCVD-RTV Report - Nov 4,
-            2024</em
-          >
-          <hr />
-          In this special coverage by RTV, we celebrate the swearing-in of a new
-          cohort of veterinary doctors, officially recognized by the Rwanda
-          Council of Veterinary Doctors (RCVD).
-        </div>
+          <div class="flex-item">
+            <iframe
+              src="https://www.youtube.com/embed/N_P9Hth5Qe0"
+              title="New Veterinary Doctors"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <em
+              >New Veterinary Doctors Sworn In by RCVD-RTV Report - Nov 4,
+              2024</em
+            >
+            <hr />
+            In this special coverage by RTV, we celebrate the swearing-in of a
+            new cohort of veterinary doctors, officially recognized by the
+            Rwanda Council of Veterinary Doctors (RCVD).
+          </div>
 
-        <div class="flex-item">
-          <iframe
-            src="https://www.youtube.com/embed/7600gcFtOZA"
-            title="Oath Taking"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-          <em
-            >OATH TAKING AND INDUCTION CEREMONY OF VETERINARY GRADUATES 2024 -
-            Nov 19, 2024</em
-          >
-          <hr />
-          Welcome to the official Oath Taking and Induction Ceremony of the
-          Veterinary Graduates of 2024.
-        </div>
+          <div class="flex-item">
+            <iframe
+              src="https://www.youtube.com/embed/7600gcFtOZA"
+              title="Oath Taking"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <em
+              >OATH TAKING AND INDUCTION CEREMONY OF VETERINARY GRADUATES 2024 -
+              Nov 19, 2024</em
+            >
+            <hr />
+            Welcome to the official Oath Taking and Induction Ceremony of the
+            Veterinary Graduates of 2024.
+          </div>
 
-        <div class="flex-item">
-          <iframe
-            src="https://www.youtube.com/embed/IBAsnecKMos"
-            title="Veterinary Conference"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-          <em
-            >Rwanda's First Annual Veterinary Scientific Conference 2019 - Oct
-            31, 2024</em
-          >
-          <hr />
-          This video covers the inaugural Veterinary Scientific Conference in
-          Rwanda.
-        </div>
+          <div class="flex-item">
+            <iframe
+              src="https://www.youtube.com/embed/IBAsnecKMos"
+              title="Veterinary Conference"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <em
+              >Rwanda's First Annual Veterinary Scientific Conference 2019 - Oct
+              31, 2024</em
+            >
+            <hr />
+            This video covers the inaugural Veterinary Scientific Conference in
+            Rwanda.
+          </div>
 
-        <div class="flex-item">
-          <iframe
-            src="https://www.youtube.com/embed/Wby9Z09WGt0"
-            title="USAID RDCP II"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-          <em
-            >USAID RDCP II Capacity Building Program for Veterinary
-            Practitioners - Oct 31, 2024</em
-          >
-          <hr />
-          Highlights the USAID Rwanda Dairy Competitiveness Program II (RDCP II)
-          capacity-building initiatives.
-        </div>
+          <div class="flex-item">
+            <iframe
+              src="https://www.youtube.com/embed/Wby9Z09WGt0"
+              title="USAID RDCP II"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <em
+              >USAID RDCP II Capacity Building Program for Veterinary
+              Practitioners - Oct 31, 2024</em
+            >
+            <hr />
+            Highlights the USAID Rwanda Dairy Competitiveness Program II (RDCP
+            II) capacity-building initiatives.
+          </div>
 
-        <div class="flex-item">
-          <iframe
-            src="https://www.youtube.com/embed/xRqTSKJk-0I"
-            title="Postmortem Training"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-          <em
-            >Inside the Veterinary Postmortem Training by MINAGRI and RCVD - Oct
-            31, 2024</em
-          >
-          <hr />
-          Provides an inside look at the Veterinary Postmortem Course organized
-          by MINAGRI and RCVD.
+          <div class="flex-item">
+            <iframe
+              src="https://www.youtube.com/embed/xRqTSKJk-0I"
+              title="Postmortem Training"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+            <em
+              >Inside the Veterinary Postmortem Training by MINAGRI and RCVD -
+              Oct 31, 2024</em
+            >
+            <hr />
+            Provides an inside look at the Veterinary Postmortem Course
+            organized by MINAGRI and RCVD.
+          </div>
         </div>
       </div>
     </div>
 
+    <h1 id="partners" class="centered-text">Partners</h1>
+    <section class="partners-slider">
+      <div class="slider-track">
+        <div class="sliding">
+          <a href="https://www.minagri.gov.rw/" target="_blank"
+            ><img src="images/partners/minagri.jpeg" alt="Partner 1"
+          /></a>
+        </div>
+        <div class="sliding">
+          <a href="https://www.rab.gov.rw/" target="_blank"
+            ><img src="images/partners/rab.png" alt="Partner 4"
+          /></a>
+        </div>
+        <div class="sliding">
+          <a href="https://ur.ac.rw/" target="_blank"
+            ><img src="images/partners/ur.png" alt="Partner 4"
+          /></a>
+        </div>
+
+        <!-- Duplicate for seamless infinite scroll -->
+        <div class="sliding">
+          <a href="https://www.minagri.gov.rw/" target="_blank"
+            ><img src="images/partners/minagri.jpeg" alt="Partner 1"
+          /></a>
+        </div>
+        <div class="sliding">
+          <a href="https://www.rab.gov.rw/" target="_blank"
+            ><img src="images/partners/rab.png" alt="Partner 4"
+          /></a>
+        </div>
+        <div class="sliding">
+          <a href="https://ur.ac.rw/" target="_blank"
+            ><img src="images/partners/ur.png" alt="Partner 4"
+          /></a>
+        </div>
+
+        <!-- Duplicate for seamless infinite scroll -->
+        <div class="sliding">
+          <a href="https://www.minagri.gov.rw/" target="_blank"
+            ><img src="images/partners/minagri.jpeg" alt="Partner 1"
+          /></a>
+        </div>
+        <div class="sliding">
+          <a href="https://www.rab.gov.rw/" target="_blank"
+            ><img src="images/partners/rab.png" alt="Partner 4"
+          /></a>
+        </div>
+        <div class="sliding">
+          <a href="https://ur.ac.rw/" target="_blank"
+            ><img src="images/partners/ur.png" alt="Partner 4"
+          /></a>
+        </div>
+
+        <!-- Duplicate for seamless infinite scroll -->
+        <div class="sliding">
+          <a href="https://www.minagri.gov.rw/" target="_blank"
+            ><img src="images/partners/minagri.jpeg" alt="Partner 1"
+          /></a>
+        </div>
+        <div class="sliding">
+          <a href="https://www.rab.gov.rw/" target="_blank"
+            ><img src="images/partners/rab.png" alt="Partner 4"
+          /></a>
+        </div>
+        <div class="sliding">
+          <a href="https://ur.ac.rw/" target="_blank"
+            ><img src="images/partners/ur.png" alt="Partner 4"
+          /></a>
+        </div>
+      </div>
+    </section>
+
     <div class="rcvd-map">
       <section class="map-section">
+        <h1>Find us</h1>
         <div class="container">
-          <h1>Find us</h1>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.739774927091!2d30.08562407496445!3d-1.9432266980318088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6fb0a85e7a7%3A0xe0f7dd6d2c876415!2sMINAGRI!5e0!3m2!1sen!2srw!4v1697038264795!5m2!1sen!2srw"
             width="100%"
