@@ -10,7 +10,11 @@
     </a>
 
     <!-- Hamburger -->
-    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button
+      class="menu-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+    >
       &#9776;
     </button>
 
@@ -54,7 +58,11 @@
         </li>
 
         <li>
-          <a href="http://elearning.rcvd.rw" target="_blank" class="start-learning">
+          <a
+            href="https://rcvd-elearning.netlify.app/"
+            target="_blank"
+            class="start-learning"
+          >
             <i class="fas fa-graduation-cap"></i> Start Learning
           </a>
         </li>
@@ -64,27 +72,27 @@
 </header>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const nav = document.querySelector('.main-nav');
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".main-nav");
 
-  // Hamburger toggle
-  toggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    toggleBtn.setAttribute(
-      'aria-expanded',
-      nav.classList.contains('active') ? 'true' : 'false'
-    );
-  });
+    // Hamburger toggle
+    toggleBtn.addEventListener("click", () => {
+      nav.classList.toggle("active");
+      toggleBtn.setAttribute(
+        "aria-expanded",
+        nav.classList.contains("active") ? "true" : "false",
+      );
+    });
 
-  // Mobile dropdown toggle
-  document.querySelectorAll('.dropdown > a').forEach((dropdownToggle) => {
-    dropdownToggle.addEventListener('click', (e) => {
-      if (window.innerWidth <= 992) {
-        e.preventDefault();
-        dropdownToggle.parentElement.classList.toggle('active');
-      }
+    // Mobile dropdown toggle
+    document.querySelectorAll(".dropdown > a").forEach((dropdownToggle) => {
+      dropdownToggle.addEventListener("click", (e) => {
+        if (window.innerWidth <= 992) {
+          e.preventDefault();
+          dropdownToggle.parentElement.classList.toggle("active");
+        }
+      });
     });
   });
-});
 </script>
