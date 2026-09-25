@@ -1,0 +1,42 @@
+:root {
+  --rcvd-primary: #18436d;
+  --rcvd-primary-dark: #103451;
+  --rcvd-primary-light: #eaf2f8;
+
+  --rcvd-text: #1f2937;
+  --rcvd-muted: #6b7280;
+
+  --rcvd-white: #ffffff;
+  --rcvd-light: #f7f9fc;
+  --rcvd-border: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: var(--rcvd-text);
+  background: var(--rcvd-white);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

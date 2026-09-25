@@ -1,0 +1,123 @@
+/* ========================================
+   SERVICES SECTION
+======================================== */
+
+.rcvd-services-section {
+  padding: 95px 0;
+  background: var(--rcvd-light);
+}
+
+.rcvd-section-heading {
+  max-width: 700px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.rcvd-section-heading .rcvd-section-label {
+  margin-bottom: 12px;
+}
+
+.rcvd-section-heading h2 {
+  margin-bottom: 16px;
+  color: var(--rcvd-primary-dark);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+
+.rcvd-section-heading p {
+  margin: 0;
+  color: var(--rcvd-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   SERVICE CARD
+======================================== */
+
+.rcvd-service-card {
+  position: relative;
+  height: 100%;
+  padding: 30px;
+  border: 1px solid var(--rcvd-border);
+  border-radius: 10px;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.rcvd-service-card:hover {
+  border-color: rgba(24, 67, 109, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+}
+
+.rcvd-service-number {
+  display: block;
+  margin-bottom: 24px;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.rcvd-service-card h3 {
+  margin-bottom: 14px;
+  color: var(--rcvd-primary-dark);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.rcvd-service-card p {
+  min-height: 82px;
+  margin-bottom: 22px;
+  color: var(--rcvd-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.rcvd-service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--rcvd-primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.rcvd-service-link span {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.rcvd-service-link:hover {
+  color: var(--rcvd-primary-dark);
+}
+
+.rcvd-service-link:hover span {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   SERVICES RESPONSIVE
+======================================== */
+
+@media (max-width: 575px) {
+  .rcvd-services-section {
+    padding: 65px 0;
+  }
+
+  .rcvd-section-heading {
+    margin-bottom: 35px;
+  }
+
+  .rcvd-service-card {
+    padding: 25px;
+  }
+
+  .rcvd-service-card p {
+    min-height: auto;
+  }
+}

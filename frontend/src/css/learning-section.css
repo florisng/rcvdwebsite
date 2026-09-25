@@ -1,0 +1,184 @@
+.rcvd-learning-section {
+  padding: 95px 0;
+  background: var(--rcvd-primary);
+  color: var(--rcvd-white);
+}
+
+.rcvd-learning-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.rcvd-learning-text {
+  max-width: 720px;
+}
+
+.rcvd-learning-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.rcvd-learning-text h2 {
+  margin-bottom: 20px;
+  color: var(--rcvd-white);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 750;
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+}
+
+.rcvd-learning-text h2 span {
+  display: block;
+  color: #a9c9e2;
+}
+
+.rcvd-learning-text p {
+  max-width: 650px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.rcvd-learning-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.rcvd-learning-primary,
+.rcvd-learning-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.rcvd-learning-primary {
+  gap: 10px;
+  background: var(--rcvd-white);
+  color: var(--rcvd-primary);
+}
+
+.rcvd-learning-primary:hover {
+  background: #eef4f8;
+  color: var(--rcvd-primary-dark);
+  transform: translateY(-2px);
+}
+
+.rcvd-learning-primary span {
+  transition: transform 0.2s ease;
+}
+
+.rcvd-learning-primary:hover span {
+  transform: translateX(4px);
+}
+
+.rcvd-learning-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--rcvd-white);
+}
+
+.rcvd-learning-secondary:hover {
+  border-color: var(--rcvd-white);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--rcvd-white);
+}
+
+.rcvd-learning-stat {
+  flex: 0 0 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 220px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.rcvd-learning-stat-number {
+  margin-bottom: 8px;
+  color: var(--rcvd-white);
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.rcvd-learning-stat-text {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 991px) {
+  .rcvd-learning-section {
+    padding: 80px 0;
+  }
+
+  .rcvd-learning-content {
+    gap: 40px;
+  }
+
+  .rcvd-learning-stat {
+    flex: 0 0 190px;
+    width: 190px;
+    height: 190px;
+  }
+
+  .rcvd-learning-stat-number {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .rcvd-learning-section {
+    padding: 70px 0;
+  }
+
+  .rcvd-learning-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 45px;
+  }
+
+  .rcvd-learning-text h2 {
+    font-size: 36px;
+  }
+
+  .rcvd-learning-actions {
+    width: 100%;
+  }
+
+  .rcvd-learning-primary,
+  .rcvd-learning-secondary {
+    width: 100%;
+  }
+
+  .rcvd-learning-stat {
+    align-self: center;
+    flex: none;
+    width: 180px;
+    height: 180px;
+  }
+}

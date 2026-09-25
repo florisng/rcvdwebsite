@@ -1,0 +1,237 @@
+.rcvd-announcements-section {
+  padding: 100px 0;
+  background: var(--rcvd-white);
+}
+
+.rcvd-section-heading {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.rcvd-section-heading .rcvd-section-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--rcvd-primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.rcvd-section-heading h2 {
+  margin-bottom: 16px;
+  color: var(--rcvd-text);
+  font-size: clamp(34px, 4vw, 46px);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.rcvd-section-heading p {
+  margin: 0;
+  color: var(--rcvd-muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   ANNOUNCEMENT CARD
+======================================== */
+
+.rcvd-announcement-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--rcvd-border);
+  border-radius: 10px;
+  background: var(--rcvd-white);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.rcvd-announcement-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(24, 67, 109, 0.2);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.09);
+}
+
+.rcvd-announcement-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.rcvd-announcement-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 10px;
+  border-radius: 5px;
+  background: var(--rcvd-primary-light);
+  color: var(--rcvd-primary);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.rcvd-announcement-meta time {
+  color: var(--rcvd-muted);
+  font-size: 12px;
+}
+
+.rcvd-announcement-card h3 {
+  margin-bottom: 12px;
+  color: var(--rcvd-text);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.rcvd-announcement-card p {
+  flex: 1;
+  margin-bottom: 22px;
+  color: var(--rcvd-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.rcvd-announcement-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  color: var(--rcvd-primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.rcvd-announcement-link:hover {
+  color: var(--rcvd-primary-dark);
+}
+
+/* ========================================
+   FOOTER BUTTON
+======================================== */
+
+.rcvd-announcements-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.rcvd-announcements-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid var(--rcvd-primary);
+  border-radius: 6px;
+  color: var(--rcvd-primary);
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.rcvd-announcements-button:hover {
+  background: var(--rcvd-primary);
+  color: var(--rcvd-white);
+  transform: translateY(-2px);
+}
+
+.rcvd-announcements-button span {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.rcvd-announcements-button:hover span {
+  transform: translateX(4px);
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 991px) {
+  .rcvd-announcements-section {
+    padding: 80px 0;
+  }
+
+  .rcvd-section-heading {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 575px) {
+  .rcvd-announcements-section {
+    padding: 65px 0;
+  }
+
+  .rcvd-section-heading {
+    margin-bottom: 32px;
+  }
+
+  .rcvd-section-heading h2 {
+    font-size: 34px;
+  }
+
+  .rcvd-announcement-card {
+    padding: 22px;
+  }
+
+  .rcvd-announcement-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* ========================================
+   ANNOUNCEMENT ACTIONS
+======================================== */
+
+.rcvd-announcement-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.rcvd-announcement-link,
+.rcvd-announcement-register {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.rcvd-announcement-link {
+  color: var(--rcvd-primary);
+}
+
+.rcvd-announcement-link:hover {
+  color: var(--rcvd-primary-dark);
+}
+
+.rcvd-announcement-register {
+  color: #166534;
+}
+
+.rcvd-announcement-register:hover {
+  color: #14532d;
+}
+
+.rcvd-announcement-link span,
+.rcvd-announcement-register span {
+  font-size: 14px;
+}

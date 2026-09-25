@@ -1,0 +1,132 @@
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.rcvd-about-section {
+  padding: 95px 0;
+  background: #ffffff;
+}
+
+.rcvd-section-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--rcvd-primary);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.rcvd-about-content h2 {
+  max-width: 620px;
+  margin-bottom: 22px;
+  color: var(--rcvd-primary-dark);
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+}
+
+.rcvd-about-content p {
+  max-width: 620px;
+  margin-bottom: 18px;
+  color: var(--rcvd-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.rcvd-about-content .rcvd-about-lead {
+  color: #475569;
+  font-size: 17px;
+}
+
+.rcvd-about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 10px;
+  color: var(--rcvd-primary);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.rcvd-about-link:hover {
+  color: var(--rcvd-primary-dark);
+}
+
+.rcvd-about-link span {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.rcvd-about-link:hover span {
+  transform: translateX(4px);
+}
+
+.rcvd-about-highlight {
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--rcvd-light);
+  border: 1px solid var(--rcvd-border);
+}
+
+.rcvd-about-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--rcvd-border);
+}
+
+.rcvd-about-highlight-item:first-child {
+  border-radius: 9px 9px 0 0;
+}
+
+.rcvd-about-highlight-item:last-child {
+  border-bottom: 0;
+  border-radius: 0 0 9px 9px;
+}
+
+.rcvd-about-icon {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: var(--rcvd-primary-light);
+  color: var(--rcvd-primary);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.rcvd-about-highlight-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--rcvd-primary-dark);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.rcvd-about-highlight-item span {
+  display: block;
+  color: var(--rcvd-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 575px) {
+  .rcvd-about-section {
+    padding: 65px 0;
+  }
+
+  .rcvd-about-content h2 {
+    font-size: 32px;
+  }
+
+  .rcvd-about-highlight-item {
+    padding: 20px;
+  }
+}
