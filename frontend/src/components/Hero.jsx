@@ -29,6 +29,7 @@ function Hero() {
                 <a
                   href="https://rcvd-elearning.netlify.app/"
                   className="rcvd-btn-outline"
+                  target="_blank"
                 >
                   Start Learning
                   <span>→</span>

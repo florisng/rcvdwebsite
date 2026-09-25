@@ -116,6 +116,7 @@ function Navbar() {
             <a
               href="https://rcvd-elearning.netlify.app/"
               className="rcvd-learning-link"
+              target="_blank"
             >
               Start Learning
               <span>→</span>

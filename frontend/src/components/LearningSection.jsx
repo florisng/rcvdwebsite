@@ -23,6 +23,7 @@ function LearningSection() {
               <a
                 href="https://rcvd-elearning.netlify.app/"
                 className="rcvd-learning-primary"
+                target="_blank"
               >
                 Start Learning
                 <span>→</span>

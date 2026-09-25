@@ -48,7 +48,9 @@ function Footer() {
             <a href="/cpd/providers">Service Providers</a>
             <a href="/cpd/forums">CPD Forums</a>
             <a href="/cpd/guidelines">CPD Guidelines</a>
-            <a href="https://rcvd-elearning.netlify.app/">Start Learning</a>
+            <a href="https://rcvd-elearning.netlify.app/" target="_blank">
+              Start Learning
+            </a>
           </div>
 
           <div className="rcvd-footer-column rcvd-footer-contact">
