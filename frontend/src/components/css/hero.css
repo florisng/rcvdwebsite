@@ -26,6 +26,8 @@
   top: -180px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 50%;
+  animation: rcvdHeroCircleOne 14s ease-in-out infinite;
+  will-change: transform;
 }
 
 .rcvd-hero::after {
@@ -37,6 +39,8 @@
   bottom: -220px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 50%;
+  animation: rcvdHeroCircleTwo 11s ease-in-out infinite;
+  will-change: transform;
 }
 
 .rcvd-hero-content {
@@ -154,6 +158,9 @@
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.04);
+
+  animation: rcvdHeroCircleThree 9s ease-in-out infinite;
+  will-change: transform;
 }
 
 .rcvd-hero-card {
@@ -196,6 +203,67 @@
   color: rgba(255, 255, 255, 0.72);
   font-size: 13px;
   line-height: 1.5;
+}
+
+/* ========================================
+   HERO CIRCLE ANIMATIONS
+======================================== */
+
+@keyframes rcvdHeroCircleOne {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-18px, 16px) rotate(3deg);
+  }
+
+  50% {
+    transform: translate(12px, 28px) rotate(-2deg);
+  }
+
+  75% {
+    transform: translate(24px, -10px) rotate(2deg);
+  }
+}
+
+@keyframes rcvdHeroCircleTwo {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(20px, -18px);
+  }
+
+  50% {
+    transform: translate(-12px, -30px);
+  }
+
+  75% {
+    transform: translate(-24px, 12px);
+  }
+}
+
+@keyframes rcvdHeroCircleThree {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  25% {
+    transform: translate(16px, -18px) scale(1.03);
+  }
+
+  50% {
+    transform: translate(-14px, -30px) scale(0.97);
+  }
+
+  75% {
+    transform: translate(-22px, 12px) scale(1.02);
+  }
 }
 
 /* ========================================
@@ -258,5 +326,17 @@
 
   .rcvd-hero-card {
     padding: 18px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rcvd-hero::before,
+  .rcvd-hero::after,
+  .rcvd-hero-circle {
+    animation: none;
   }
 }
