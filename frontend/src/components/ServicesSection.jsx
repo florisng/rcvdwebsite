@@ -1,4 +1,5 @@
-import "../css/services-section.css";
+import Reveal from "../Reveal";
+import "./css/services-section.css";
 
 function ServicesSection() {
   const services = [
@@ -43,32 +44,36 @@ function ServicesSection() {
   return (
     <section className="rcvd-services-section" id="services">
       <div className="container">
-        <div className="rcvd-section-heading">
-          <span className="rcvd-section-label">What We Do</span>
+        <Reveal direction="up">
+          <div className="rcvd-section-heading">
+            <span className="rcvd-section-label">What We Do</span>
 
-          <h2>Our Services</h2>
+            <h2>Our Services</h2>
 
-          <p>
-            RCVD supports the veterinary profession through regulation,
-            professional development, guidance, and collaboration.
-          </p>
-        </div>
+            <p>
+              RCVD supports the veterinary profession through regulation,
+              professional development, guidance, and collaboration.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="row g-4">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <div className="col-md-6 col-lg-4" key={service.number}>
-              <div className="rcvd-service-card">
-                <span className="rcvd-service-number">{service.number}</span>
+              <Reveal direction="up" delay={index * 0.12}>
+                <div className="rcvd-service-card">
+                  <span className="rcvd-service-number">{service.number}</span>
 
-                <h3>{service.title}</h3>
+                  <h3>{service.title}</h3>
 
-                <p>{service.description}</p>
+                  <p>{service.description}</p>
 
-                <a href="/services" className="rcvd-service-link">
-                  Learn More
-                  <span>→</span>
-                </a>
-              </div>
+                  <a href="/services" className="rcvd-service-link">
+                    Learn More
+                    <span>→</span>
+                  </a>
+                </div>
+              </Reveal>
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
-import "../css/announcements-section.css";
+import Reveal from "../Reveal";
+import "./css/announcements-section.css";
 
 function AnnouncementsSection() {
   const announcements = [
@@ -43,60 +44,66 @@ function AnnouncementsSection() {
   return (
     <section className="rcvd-announcements-section" id="announcements">
       <div className="container">
-        <div className="rcvd-section-heading">
-          <span className="rcvd-section-label">Stay Informed</span>
+        <Reveal direction="up">
+          <div className="rcvd-section-heading">
+            <span className="rcvd-section-label">Stay Informed</span>
 
-          <h2>Latest Announcements</h2>
+            <h2>Latest Announcements</h2>
 
-          <p>
-            Keep up to date with RCVD announcements, notices, professional
-            information, and important updates.
-          </p>
-        </div>
+            <p>
+              Keep up to date with RCVD announcements, notices, professional
+              information, and important updates.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="row g-4">
           {announcements.map((announcement, index) => (
             <div className="col-lg-4" key={index}>
-              <article className="rcvd-announcement-card">
-                <div className="rcvd-announcement-meta">
-                  <span>{announcement.category}</span>
-                  <time>{announcement.date}</time>
-                </div>
+              <Reveal direction="up" delay={index * 0.12}>
+                <article className="rcvd-announcement-card">
+                  <div className="rcvd-announcement-meta">
+                    <span>{announcement.category}</span>
+                    <time>{announcement.date}</time>
+                  </div>
 
-                <h3>{announcement.title}</h3>
+                  <h3>{announcement.title}</h3>
 
-                <p>{announcement.description}</p>
+                  <p>{announcement.description}</p>
 
-                <div className="rcvd-announcement-actions">
-                  <a
-                    href={announcement.pdfUrl}
-                    className="rcvd-announcement-link"
-                  >
-                    <span>📄</span>
-                    View PDF
-                  </a>
-
-                  {announcement.registrationUrl && (
+                  <div className="rcvd-announcement-actions">
                     <a
-                      href={announcement.registrationUrl}
-                      className="rcvd-announcement-register"
+                      href={announcement.pdfUrl}
+                      className="rcvd-announcement-link"
                     >
-                      <span>📝</span>
-                      Register
+                      <span>📄</span>
+                      View PDF
                     </a>
-                  )}
-                </div>
-              </article>
+
+                    {announcement.registrationUrl && (
+                      <a
+                        href={announcement.registrationUrl}
+                        className="rcvd-announcement-register"
+                      >
+                        <span>📝</span>
+                        Register
+                      </a>
+                    )}
+                  </div>
+                </article>
+              </Reveal>
             </div>
           ))}
         </div>
 
-        <div className="rcvd-announcements-footer">
-          <a href="/announcements" className="rcvd-announcements-button">
-            View All Announcements
-            <span>→</span>
-          </a>
-        </div>
+        <Reveal direction="up" delay={0.25}>
+          <div className="rcvd-announcements-footer">
+            <a href="/announcements" className="rcvd-announcements-button">
+              View All Announcements
+              <span>→</span>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );

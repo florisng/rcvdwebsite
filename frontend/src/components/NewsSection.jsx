@@ -1,4 +1,5 @@
-import "../css/news-section.css";
+import Reveal from "../Reveal";
+import "./css/news-section.css";
 
 function NewsSection() {
   const news = [
@@ -28,38 +29,42 @@ function NewsSection() {
   return (
     <section className="rcvd-news-section" id="news">
       <div className="container">
-        <div className="rcvd-news-header">
-          <div>
-            <span className="rcvd-section-label">News &amp; Events</span>
+        <Reveal direction="up">
+          <div className="rcvd-news-header">
+            <div>
+              <span className="rcvd-section-label">News &amp; Events</span>
 
-            <h2>Latest Updates from RCVD</h2>
+              <h2>Latest Updates from RCVD</h2>
+            </div>
+
+            <a href="/announcements" className="rcvd-news-view-all">
+              View All Updates
+              <span>→</span>
+            </a>
           </div>
-
-          <a href="/announcements" className="rcvd-news-view-all">
-            View All Updates
-            <span>→</span>
-          </a>
-        </div>
+        </Reveal>
 
         <div className="row g-4">
-          {news.map((item) => (
+          {news.map((item, index) => (
             <div className="col-md-6 col-lg-4" key={item.title}>
-              <article className="rcvd-news-card">
-                <div className="rcvd-news-card-top">
-                  <span className="rcvd-news-category">{item.category}</span>
+              <Reveal direction="zoom" delay={index * 0.15}>
+                <article className="rcvd-news-card">
+                  <div className="rcvd-news-card-top">
+                    <span className="rcvd-news-category">{item.category}</span>
 
-                  <span className="rcvd-news-date">{item.date}</span>
-                </div>
+                    <span className="rcvd-news-date">{item.date}</span>
+                  </div>
 
-                <h3>{item.title}</h3>
+                  <h3>{item.title}</h3>
 
-                <p>{item.description}</p>
+                  <p>{item.description}</p>
 
-                <a href="/announcements" className="rcvd-news-link">
-                  Read More
-                  <span>→</span>
-                </a>
-              </article>
+                  <a href="/announcements" className="rcvd-news-link">
+                    Read More
+                    <span>→</span>
+                  </a>
+                </article>
+              </Reveal>
             </div>
           ))}
         </div>

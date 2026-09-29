@@ -1,0 +1,38 @@
+.go-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1100;
+
+  width: 48px;
+  height: 42px;
+
+  border: 0;
+  border-radius: 6px;
+
+  background: var(--rcvd-primary);
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.18);
+
+  transition: all 0.2s ease;
+}
+
+.go-to-top:hover {
+  background: var(--rcvd-primary-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 575px) {
+  .go-to-top {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 40px;
+  }
+}

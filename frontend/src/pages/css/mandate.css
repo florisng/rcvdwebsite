@@ -1,0 +1,177 @@
+.rcvd-mandate-page {
+  background: var(--rcvd-light);
+}
+
+.rcvd-mandate-page .rcvd-page-hero {
+  background: linear-gradient(
+    135deg,
+    var(--rcvd-primary-dark),
+    var(--rcvd-primary)
+  );
+  color: var(--rcvd-white);
+  padding: 90px 0 80px;
+}
+
+.rcvd-mandate-page .rcvd-page-hero-content {
+  max-width: 760px;
+}
+
+.rcvd-mandate-page .rcvd-page-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.rcvd-mandate-page .rcvd-page-breadcrumb a {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.rcvd-mandate-page .rcvd-page-breadcrumb span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.rcvd-mandate-page .rcvd-page-hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.rcvd-mandate-page .rcvd-page-hero p {
+  margin: 0;
+  max-width: 680px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.rcvd-mandate-content {
+  padding: 80px 0;
+}
+
+.rcvd-mandate-intro {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.rcvd-mandate-intro span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--rcvd-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.rcvd-mandate-intro h2 {
+  margin: 0 0 14px;
+  color: var(--rcvd-primary-dark);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.rcvd-mandate-intro p {
+  margin: 0;
+  color: var(--rcvd-muted);
+  line-height: 1.8;
+}
+
+.rcvd-mandate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.rcvd-mandate-card {
+  padding: 30px;
+  background: var(--rcvd-white);
+  border: 1px solid var(--rcvd-border);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(16, 52, 81, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.rcvd-mandate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(16, 52, 81, 0.1);
+}
+
+.rcvd-mandate-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: var(--rcvd-primary-light);
+  color: var(--rcvd-primary);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.rcvd-mandate-card h3 {
+  margin: 0 0 10px;
+  color: var(--rcvd-primary-dark);
+  font-size: 1.15rem;
+}
+
+.rcvd-mandate-card p {
+  margin: 0;
+  color: var(--rcvd-muted);
+  line-height: 1.7;
+}
+
+.rcvd-mandate-notice {
+  max-width: 1100px;
+  margin: 35px auto 0;
+  padding: 24px 28px;
+  background: var(--rcvd-primary-light);
+  border-left: 4px solid var(--rcvd-primary);
+  border-radius: 8px;
+}
+
+.rcvd-mandate-notice strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--rcvd-primary-dark);
+}
+
+.rcvd-mandate-notice p {
+  margin: 0;
+  color: var(--rcvd-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 991px) {
+  .rcvd-mandate-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .rcvd-mandate-page .rcvd-page-hero {
+    padding: 60px 0 50px;
+  }
+
+  .rcvd-mandate-content {
+    padding: 50px 0;
+  }
+
+  .rcvd-mandate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rcvd-mandate-card {
+    padding: 24px;
+  }
+}

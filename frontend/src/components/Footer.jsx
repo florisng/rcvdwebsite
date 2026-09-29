@@ -1,5 +1,5 @@
 import rcvdLogo from "../assets/rcvd-logo.png";
-import "../css/footer.css";
+import "./css/footer.css";
 
 function Footer() {
   return (

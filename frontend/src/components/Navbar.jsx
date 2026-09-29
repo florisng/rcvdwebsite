@@ -1,6 +1,6 @@
 import { useState } from "react";
 import rcvdLogo from "../assets/rcvd-logo.png";
-import "../css/navbar.css";
+import "./css/navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,8 +16,8 @@ function Navbar() {
             </div>
 
             <div className="rcvd-topbar-links">
-              <a href="/announcements">Announcements</a>
-              <a href="/contact">Contact Us</a>
+              <a href="/#announcements">Announcements</a>
+              <a href="/#contact">Contact Us</a>
             </div>
           </div>
         </div>
@@ -68,10 +68,10 @@ function Navbar() {
               </button>
 
               <div className="rcvd-dropdown-menu">
-                <a href="/about">RCVD</a>
-                <a href="/services">Services</a>
+                <a href="/#about">RCVD</a>
+                <a href="/#services">Services</a>
                 <a href="/board-members">Board Members</a>
-                <a href="/contact">Contact Us</a>
+                <a href="/#contact">Contact Us</a>
               </div>
             </div>
 
@@ -82,7 +82,7 @@ function Navbar() {
               </button>
 
               <div className="rcvd-dropdown-menu">
-                <a href="/announcements">Announcements</a>
+                <a href="/#announcements">Announcements</a>
                 <a href="/legal-documents">Legal Documents</a>
                 <a href="/jobs">Jobs</a>
               </div>
@@ -95,9 +95,9 @@ function Navbar() {
               </button>
 
               <div className="rcvd-dropdown-menu">
-                <a href="/cpd/providers">Service Providers</a>
-                <a href="/cpd/forums">CPD Forums</a>
-                <a href="/cpd/guidelines">CPD Guidelines</a>
+                <a href="/service-providers">Service Providers</a>
+                <a href="/pcd-forums">CPD Forums</a>
+                <a href="/cpd-guidelines">CPD Guidelines</a>
               </div>
             </div>
 
@@ -108,8 +108,8 @@ function Navbar() {
               </button>
 
               <div className="rcvd-dropdown-menu">
-                <a href="/veterinary/sanitary">Sanitary</a>
-                <a href="/veterinary/mandate">Mandate</a>
+                <a href="/sanitary">Sanitary</a>
+                <a href="/mandate">Mandate</a>
               </div>
             </div>
 

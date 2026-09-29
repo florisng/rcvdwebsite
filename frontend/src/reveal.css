@@ -1,0 +1,44 @@
+/* ========================================
+   RCVD SCROLL REVEAL
+======================================== */
+
+.rcvd-reveal {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.rcvd-reveal-up {
+  transform: translateY(60px);
+}
+
+.rcvd-reveal-left {
+  transform: translateX(-80px);
+}
+
+.rcvd-reveal-right {
+  transform: translateX(80px);
+}
+
+.rcvd-reveal-zoom {
+  transform: scale(0.82);
+}
+
+.rcvd-reveal.is-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* ========================================
+   ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rcvd-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
