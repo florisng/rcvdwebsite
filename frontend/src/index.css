@@ -1,3 +1,8 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
 :root {
   --rcvd-primary: #18436d;
   --rcvd-primary-dark: #103451;
