@@ -7,6 +7,7 @@ import {
 import { useEffect, useState } from "react";
 
 import Navbar from "./components/Navbar";
+import InstitutionalSection from "./components/InstitutionalSection";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
@@ -33,6 +34,7 @@ import BoardMembers from "./pages/BoardMembers";
 function Home() {
   return (
     <main>
+      <InstitutionalSection />
       <Hero />
       <AboutSection />
       <ServicesSection />
