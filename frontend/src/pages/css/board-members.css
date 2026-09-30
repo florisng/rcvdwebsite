@@ -1,165 +1,465 @@
+/* ========================================
+   BOARD MEMBERS PAGE
+======================================== */
+
 .rcvd-board-page {
-  background: var(--rcvd-light);
+  background: #ffffff;
 }
 
+/* ========================================
+   PAGE HERO
+======================================== */
+
 .rcvd-page-hero {
+  position: relative;
+  padding: 95px 0 90px;
   background: linear-gradient(
     135deg,
-    var(--rcvd-primary-dark),
-    var(--rcvd-primary)
+    rgba(8, 142, 205, 0.96),
+    rgba(6, 111, 163, 0.94)
   );
-  color: var(--rcvd-white);
-  padding: 90px 0 80px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.rcvd-page-hero::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  right: -120px;
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+}
+
+.rcvd-page-hero::after {
+  content: "";
+  position: absolute;
+  bottom: -240px;
+  left: -120px;
+  width: 520px;
+  height: 520px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 }
 
 .rcvd-page-hero-content {
-  max-width: 760px;
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
 }
 
 .rcvd-page-breadcrumb {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.75);
+  gap: 10px;
+  margin-bottom: 22px;
+  font-size: 13px;
 }
 
 .rcvd-page-breadcrumb a {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.2s ease;
+}
+
+.rcvd-page-breadcrumb a:hover {
+  color: #ffffff;
 }
 
 .rcvd-page-breadcrumb span {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .rcvd-page-hero h1 {
-  margin: 0 0 16px;
-  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin: 0 0 18px;
+  font-size: clamp(38px, 5vw, 58px);
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 .rcvd-page-hero p {
+  max-width: 700px;
   margin: 0;
-  max-width: 680px;
-  font-size: 1.08rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 17px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.88);
 }
 
-.rcvd-board-content {
-  padding: 80px 0;
+/* ========================================
+   COMMON SECTION
+======================================== */
+
+.rcvd-board-content,
+.rcvd-staff-content {
+  padding: 95px 0;
+}
+
+.rcvd-staff-content {
+  background: #f7f9fc;
+  border-top: 1px solid #e8edf2;
 }
 
 .rcvd-section-heading {
-  max-width: 700px;
-  margin: 0 auto 50px;
+  max-width: 760px;
+  margin: 0 auto 55px;
   text-align: center;
 }
 
-.rcvd-section-heading span {
-  display: block;
-  margin-bottom: 10px;
-  color: var(--rcvd-primary);
-  font-size: 0.85rem;
+.rcvd-section-heading > span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #088ecd;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .rcvd-section-heading h2 {
-  margin: 0 0 14px;
-  color: var(--rcvd-primary-dark);
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin: 0 0 17px;
+  color: #18364d;
+  font-size: clamp(30px, 4vw, 42px);
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .rcvd-section-heading p {
-  margin: 0;
-  color: var(--rcvd-muted);
+  max-width: 680px;
+  margin: 0 auto;
+  color: #6b7280;
+  font-size: 15px;
   line-height: 1.8;
 }
 
+/* ========================================
+   BOARD GRID
+======================================== */
+
 .rcvd-board-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 28px;
 }
 
+/* ========================================
+   BOARD CARD
+======================================== */
+
 .rcvd-board-card {
-  background: var(--rcvd-white);
-  border: 1px solid var(--rcvd-border);
-  border-radius: 14px;
+  height: 100%;
   overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5e9ed;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(16, 52, 81, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.rcvd-board-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(8, 142, 205, 0.35);
+  box-shadow: 0 18px 35px rgba(16, 52, 81, 0.12);
+}
+
+/* ========================================
+   BOARD PHOTO
+======================================== */
+
+.rcvd-board-photo-wrapper {
+  width: 100%;
+  height: 285px;
+  overflow: hidden;
+  background: #edf3f7;
+}
+
+.rcvd-board-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+
+.rcvd-board-card:hover .rcvd-board-photo {
+  transform: scale(1.03);
+}
+
+/* ========================================
+   BOARD CARD CONTENT
+======================================== */
+
+.rcvd-board-card-content {
+  padding: 22px 22px 24px;
   text-align: center;
-  box-shadow: 0 8px 30px rgba(16, 52, 81, 0.06);
+}
+
+.rcvd-board-card-content h3 {
+  margin: 0 0 8px;
+  color: #18364d;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.rcvd-board-card-content p {
+  margin: 0;
+  color: #088ecd;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ========================================
+   EXECUTIVE STAFF GRID
+======================================== */
+
+.rcvd-staff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ========================================
+   STAFF CARD
+======================================== */
+
+.rcvd-staff-card {
+  display: flex;
+  align-items: stretch;
+  min-height: 220px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e3e8ed;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(16, 52, 81, 0.05);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-.rcvd-board-card:hover {
+.rcvd-staff-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 14px 35px rgba(16, 52, 81, 0.1);
+  box-shadow: 0 16px 32px rgba(16, 52, 81, 0.1);
 }
 
-.rcvd-board-photo {
+/* ========================================
+   STAFF PHOTO
+======================================== */
+
+.rcvd-staff-photo-wrapper {
+  width: 145px;
+  min-width: 145px;
+  overflow: hidden;
+  background: #edf3f7;
+}
+
+.rcvd-staff-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s ease;
+}
+
+.rcvd-staff-card:hover .rcvd-staff-photo {
+  transform: scale(1.04);
+}
+
+/* ========================================
+   STAFF CONTENT
+======================================== */
+
+.rcvd-staff-card-content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  height: 220px;
-  background: var(--rcvd-primary-light);
-  color: var(--rcvd-primary);
-  font-size: 3rem;
+  padding: 22px;
+}
+
+.rcvd-staff-card-content h3 {
+  margin: 0 0 8px;
+  color: #18364d;
+  font-size: 16px;
   font-weight: 700;
+  line-height: 1.4;
 }
 
-.rcvd-board-card-content {
-  padding: 24px 20px 26px;
+.rcvd-staff-role {
+  margin: 0 0 14px;
+  color: #088ecd;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
-.rcvd-board-card h3 {
-  margin: 0 0 7px;
-  color: var(--rcvd-primary-dark);
-  font-size: 1.15rem;
+.rcvd-staff-card-content a {
+  display: block;
+  margin-top: 5px;
+  color: #6b7280;
+  font-size: 12px;
+  line-height: 1.5;
+  word-break: break-word;
+  transition: color 0.2s ease;
 }
 
-.rcvd-board-card p {
-  margin: 0;
-  color: var(--rcvd-muted);
-  font-size: 0.95rem;
+.rcvd-staff-card-content a:hover {
+  color: #088ecd;
 }
+
+/* ========================================
+   LARGE TABLET
+======================================== */
+
+@media (max-width: 1199px) {
+  .rcvd-board-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rcvd-staff-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rcvd-board-photo-wrapper {
+    height: 270px;
+  }
+}
+
+/* ========================================
+   TABLET
+======================================== */
 
 @media (max-width: 991px) {
   .rcvd-page-hero {
-    padding: 75px 0 65px;
+    padding: 80px 0 75px;
   }
 
-  .rcvd-board-content {
-    padding: 65px 0;
+  .rcvd-board-content,
+  .rcvd-staff-content {
+    padding: 75px 0;
   }
 
   .rcvd-board-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rcvd-board-photo-wrapper {
+    height: 300px;
+  }
+
+  .rcvd-staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rcvd-staff-card {
+    min-height: 230px;
+  }
+
+  .rcvd-staff-photo-wrapper {
+    width: 180px;
+    min-width: 180px;
   }
 }
 
+/* ========================================
+   MOBILE
+======================================== */
+
 @media (max-width: 767px) {
   .rcvd-page-hero {
-    padding: 60px 0 50px;
+    padding: 65px 0 60px;
   }
 
-  .rcvd-board-content {
-    padding: 50px 0;
+  .rcvd-page-hero h1 {
+    font-size: 38px;
+  }
+
+  .rcvd-page-hero p {
+    font-size: 15px;
+  }
+
+  .rcvd-board-content,
+  .rcvd-staff-content {
+    padding: 60px 0;
+  }
+
+  .rcvd-section-heading {
+    margin-bottom: 40px;
+  }
+
+  .rcvd-section-heading h2 {
+    font-size: 30px;
   }
 
   .rcvd-board-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 24px;
   }
 
-  .rcvd-board-photo {
-    height: 200px;
+  .rcvd-board-photo-wrapper {
+    height: 360px;
+  }
+
+  .rcvd-staff-grid {
+    gap: 24px;
+  }
+
+  .rcvd-staff-card {
+    flex-direction: column;
+  }
+
+  .rcvd-staff-photo-wrapper {
+    width: 100%;
+    min-width: 0;
+    height: 320px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .rcvd-page-hero {
+    padding: 55px 0 50px;
+  }
+
+  .rcvd-page-hero h1 {
+    font-size: 34px;
+  }
+
+  .rcvd-board-photo-wrapper {
+    height: 330px;
+  }
+
+  .rcvd-staff-photo-wrapper {
+    height: 290px;
+  }
+
+  .rcvd-board-card-content {
+    padding: 20px;
+  }
+
+  .rcvd-staff-card-content {
+    padding: 20px;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .rcvd-board-card,
+  .rcvd-staff-card,
+  .rcvd-board-photo,
+  .rcvd-staff-photo {
+    transition: none;
   }
 }
