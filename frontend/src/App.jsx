@@ -36,10 +36,10 @@ function Home() {
     <main>
       <InstitutionalSection />
       <Hero />
+      <AnnouncementsSection />
       <AboutSection />
       <ServicesSection />
       <CpdSection />
-      <AnnouncementsSection />
       <ValuesSection />
       <LearningSection />
       <PartnersSection />

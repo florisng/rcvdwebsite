@@ -235,3 +235,67 @@
 .rcvd-announcement-register span {
   font-size: 14px;
 }
+
+/* Featured style for the latest announcement */
+.rcvd-announcement-card-latest {
+  position: relative;
+  border: 2px solid #18436d;
+  border-left: 6px solid #18436d;
+  border-radius: 12px;
+  padding: 30px;
+  background: #f5f9fd;
+  box-shadow: 0 8px 24px rgba(24, 67, 109, 0.1);
+}
+
+.rcvd-announcement-card-latest h3 {
+  margin-top: 12px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.rcvd-announcement-latest-badge {
+  display: inline-block;
+  width: fit-content;
+  margin: 12px 0 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: #18436d;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.rcvd-announcement-reference {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: #18436d;
+  font-weight: 700;
+}
+
+.rcvd-announcement-card-latest .rcvd-announcement-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 6px;
+  background: #18436d;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.rcvd-announcement-card-latest .rcvd-announcement-link:hover {
+  background: #10304f;
+}
+
+@media (max-width: 576px) {
+  .rcvd-announcement-card-latest {
+    padding: 20px;
+  }
+
+  .rcvd-announcement-card-latest h3 {
+    font-size: 1.2rem;
+  }
+}
