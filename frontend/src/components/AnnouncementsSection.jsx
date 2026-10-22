@@ -7,7 +7,7 @@ function AnnouncementsSection() {
       date: "20/10/2026",
       category: "Official Announcement",
       reference: "Ref No: 185/RCVD/2026",
-      title: "ITANGAZO RY'URUGAGA RW'ABAGANGA B'AMATUNGO",
+      title: "ITANGAZO RY'URUGAGA RW'ABAGANGA B'AMATUNGO.",
       description:
         "Itangazo ryemewe n'Urugaga rw'Abaganga b'Amatungo mu Rwanda.",
       pdfUrl: "/documents/itangazo-185-rcvd-2026.pdf",
@@ -17,7 +17,7 @@ function AnnouncementsSection() {
     {
       date: "08/09/2026",
       category: "Announcement",
-      title: "ITANGAZO RIREBANA N'ABAKOZE IKIZAMINI",
+      title: "ITANGAZO RIREBANA N'ABAKOZE IKIZAMINI.",
       description:
         "Important announcement regarding candidates who took the veterinary examination.",
       pdfUrl: "/documents/itangazo-165-rcvd-2026.pdf",
@@ -26,7 +26,7 @@ function AnnouncementsSection() {
     {
       date: "28/08/2026",
       category: "Announcement",
-      title: "FINAL LIST OF REGISTERED CANDIDATES",
+      title: "FINAL LIST OF REGISTERED CANDIDATES.",
       description:
         "Official final list of candidates registered for the relevant RCVD examination.",
       pdfUrl: "/documents/itangazo-final-list.pdf",

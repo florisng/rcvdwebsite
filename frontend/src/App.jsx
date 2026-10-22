@@ -35,8 +35,8 @@ function Home() {
   return (
     <main>
       <InstitutionalSection />
-      <Hero />
       <AnnouncementsSection />
+      <Hero />
       <AboutSection />
       <ServicesSection />
       <CpdSection />
