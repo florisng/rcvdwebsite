@@ -25,11 +25,11 @@ import PcdForums from "./pages/PcdForums";
 import CpdGuidelines from "./pages/CpdGuidelines";
 import Sanitary from "./pages/Sanitary";
 import Mandate from "./pages/Mandate";
+import BoardMembers from "./pages/BoardMembers";
+import Admin from "./pages/Admin";
 import Footer from "./components/Footer";
 
 import "./components/css/go-to-top.css";
-
-import BoardMembers from "./pages/BoardMembers";
 
 function Home() {
   return (
@@ -121,6 +121,7 @@ function App() {
         <Route path="/cpd-guidelines" element={<CpdGuidelines />} />
         <Route path="/sanitary" element={<Sanitary />} />
         <Route path="/mandate" element={<Mandate />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
 
       <Footer />
