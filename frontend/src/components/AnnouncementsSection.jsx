@@ -4,13 +4,13 @@ import "./css/announcements-section.css";
 function AnnouncementsSection() {
   const announcements = [
     {
-      date: "20/10/2026",
+      date: "22/10/2026",
       category: "Official Announcement",
-      reference: "Ref No: 185/RCVD/2026",
-      title: "ITANGAZO RY'URUGAGA RW'ABAGANGA B'AMATUNGO.",
+      reference: "Ref No: 190/RCVD/2026",
+      title: "ITANGAZO RY'IKIZAMINI.",
       description:
-        "Itangazo ryemewe n'Urugaga rw'Abaganga b'Amatungo mu Rwanda.",
-      pdfUrl: "/documents/itangazo-185-rcvd-2026.pdf",
+        "Itangazo ryemewe n'Urugaga rw'Abaganga b'Amatungo rirebana n'ikizamini cyo kwiyandikisha mu rugagarw'abaganga.",
+      pdfUrl: "/documents/itangazo-190-rcvd-2026.pdf",
       registrationUrl: "https://ee.minagri.gov.rw/x/zkBTDHKL",
       isLatest: true,
     },
